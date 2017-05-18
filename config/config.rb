@@ -32,6 +32,7 @@
 #
 #AppConfig[:allow_other_unmapped] = false
 #
+AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=as&password=as123&useUnicode=true&characterEncoding=UTF-8"
 #AppConfig[:db_url] = proc { AppConfig.demo_db_url }
 #AppConfig[:db_url_redacted] = proc { AppConfig[:db_url].gsub(/(user|password)=(.*?)&/, '\1=[REDACTED]&') }
 #AppConfig[:db_max_connections] = proc { 20 + (AppConfig[:indexer_thread_count] * 2) }
