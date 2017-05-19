@@ -177,8 +177,12 @@ br.clear {clear: both;}
 
 /* Global */
 
-div#page, div#header, div#footer {
+div#page, div#footer {
 width: 960px;
+margin: 0 auto;
+}
+
+div#header {
 margin: 0 auto;
 }
 
@@ -218,6 +222,7 @@ font-size: .9em;
 position: absolute;
 top: 0;
 right: .5em; text-align: right;
+margin-top: -10px;
 }
 
 
@@ -1076,3 +1081,49 @@ div#LinkedCollectionsResults {display: block !important;}
 img#LinkedCollectionsImage {display:none;}
 .CreatorEntry a {text-decoration: none; color: #000; font-size: 1.2em;}
 .CreatorEntry div#LinkedCollectionsResults a {text-decoration: underline; color: #333399; font-size: 1em;}
+
+a:link, a:hover, a:active, #navigation a:visited
+{
+  color: #333399;
+}
+
+#dept a
+{
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  height: auto;
+  font-size: 0.9em;
+}
+
+#dept a, #dept a:hover, #dept a:active, #dept a:visited
+{
+  color: #4d1a1a;
+  background-color: transparent;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+}
+
+#dept a, #dept a:hover, #dept a:active, #dept a:visited
+{
+  color: #4d1a1a;
+  background-color: transparent;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+}
+
