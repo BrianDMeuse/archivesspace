@@ -1,6 +1,9 @@
 en:
   brand:
-    title: ArchivesSpace Public Interface
+    title: Brandeis Finding Aids Database
     home: Home
-    welcome_message: Welcome to ArchivesSpace.
-    welcome_search_label: "Find stuffz:"
+    welcome_message: Finding Aids Database
+    welcome_search_label: "Search:"
+    
+  navbar:
+    search_placeholder: Search entire database
