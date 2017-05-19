@@ -14,7 +14,6 @@
             </li>
             <li class="divider-vertical"></li>
             <li <% if params["type"]==="resource"%> class="active" <% end%>><%= link_to I18n.t("resource._plural"), {:controller => :search, :action => :search, :type => "resource"} %></li>
-            <li <% if params["type"]==="accession"%> class="active" <% end%>><%= link_to I18n.t("accession._plural"), {:controller => :search, :action => :search, :type => "accession"} %></li>
             <li <% if params["type"]==="subject"%> class="active" <% end%>><%= link_to I18n.t("subject._plural"),  {:controller => :search, :action => :search, :type => "subject"} %></li>
             <li <% if params["type"]==="agent"%> class="active" <% end%>><%= link_to I18n.t("agent._plural"),  {:controller => :search, :action => :search, :type => "agent"} %></li>
             <li <% if params["type"]==="classification"%> class="active" <% end%>><%= link_to I18n.t("classification._plural"),  {:controller => :search, :action => :search, :type => "classification"} %></li>
