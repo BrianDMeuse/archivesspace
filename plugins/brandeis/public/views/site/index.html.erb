@@ -68,7 +68,7 @@ $(window).unload(function() {});
         <p>You may browse all collections available for research. Finding aids (guides) are available for collections that are fully processed. Partially processed or unprocessed collections contain brief descriptions of collection contents.</p>
       <ul id="home-browse">
         <li><a href="http://archivesspace.unet.brandeis.edu/search?filter_term[]={%22primary_type%22%3A%22resource%22}&page=1">Browse Collections by Title</a></li>
-        <li><a href="http://libsys-sandbox.unet.brandeis.edu:8081/search?type=subject">Browse Collections by Subject</a></li>
+        <li><a href="http://archivesspace.unet.brandeis.edu:8081/search?type=subject">Browse Collections by Subject</a></li>
         <li><a href="http://archivesspace.unet.brandeis.edu/search?type=agent">Browse Collections by Creator</a></li>
         </ul>   
     </div>
@@ -77,9 +77,9 @@ $(window).unload(function() {});
     <h2>Search</h2>
     <div id="home-search">
     <p><strong>Enter keyword(s):</strong></p>
-     <form action="index.php" accept-charset="UTF-8" method="get" onsubmit="if(!this.q.value) { alert('Please enter search terms.'); return false; } else { return true; }">
-     <div>
-     <input type="hidden" name="p" value="core/search" />
+     <form action="/search" accept-charset="UTF-8" method="get" onsubmit="if(!this.q.value) { alert('Please enter search terms.'); return false; } else { return true; }">
+		 <div>
+     <input type="hidden" name="content" value="1" />
 	  <label for='qfa'></label><input type="text" size="25" maxlength="150" name="q" id="qfa" value="" tabindex="100" />
       <input type="submit" value="Search" tabindex="300" class='button' title="Search" />
           <input type="hidden" name="content" value="1" />
