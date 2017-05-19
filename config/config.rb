@@ -141,6 +141,7 @@ AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=as&password
 #
 ## Plug-ins to load. They will load in the order specified
 #AppConfig[:plugins] = ['local',  'lcnaf', 'aspace-public-formats']
+AppConfig[:plugins] = ['brandeis', 'aspace-public-formats']
 #
 ## URL to direct the feedback link
 ## You can remove this from the footer by making the value blank.
