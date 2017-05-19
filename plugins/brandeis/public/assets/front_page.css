@@ -1,0 +1,1078 @@
+
+/*
+ * Stylesheet for 'default' Archon Theme
+ *
+ * ##########################################################
+ *
+ * THIS STYLESHEET HAS FOUR SECTIONS:
+ *
+ * 	1. GENERAL STYLES (controls text properties)
+ * 		2. THEME STRUCTURES/FORMATTING  (establishes basic structure of the page)
+ * 			3. PUBLIC FILE FORMATTING (controls position and style of elements
+ * 				      defined outside of template files)
+ * 				      	4. TEMPLATE FILE FORMATTING (controls position and style of elements
+ * 				      		      defined in template files, these apply to default template set)
+ *
+ * 				      		      The stylesheet assumes that layout will take place in one to four
+ * 				      		      'general structure' boxes, referenced by an class below.  These classes may be
+ * 				      		      used with either a tabled or tableless design, by referencing
+ * 				      		      a <table id=''> or <div id=''> in the following files.
+ *
+ * 				      		      	top    --header.inc.php; faheader.inc.php
+ * 				      		      		left   --header.inc.php; faheader.inc.php
+ * 				      		      			main   --index.inc.php; files in packages/'packagename'/templates/default
+ * 				      		      				                              and packages/'packagename'/
+ * 				      		      				                              	bottom --footer.inc.php; fafooter.inc.php
+ *
+ * 				      		      				                              	For background reading regarding layout using principles in this stylesheet, see
+ * 				      		      				                              	http://www.devarticles.com/c/a/Web-Style-Sheets/DIV-Based-Layout-with-CSS/3/
+ *
+ * 				      		      				                              	###########################################################
+ *
+ * 				      		      				                              	BEGIN GENERAL STYLES FOR ENTIRE DOCUMENT */
+
+html {
+overflow:scroll;
+}
+
+body {
+background-color:#FFF;
+/*color:#10375D;*/
+font-size:100%;
+font-family:"Lucida Grande",  "Lucida Sans Unicode", Verdana,  Arial,  Helvetica,  sans-serif;
+margin: 0;
+padding:0;
+line-height:1.125em; /* 16×1.125=18 */
+}
+
+a:link, a:hover, a:active, #navigation a:visited {
+color:#333399;
+}
+
+#main-inner a:visited {
+color:#999;
+}
+
+#page {
+font-size:0.75em;
+}
+
+#navigation p, #navigation ul, p, #dl, #inner-main ul, .ccardcontent, .ccardcontents {
+margin-top:.25em;
+margin-bottom: .25em;
+}
+
+h1 {
+color: #4D1A1A;
+font-size:1.6em;
+}
+
+h2 {
+/*color: #4D1A1A;*/
+font-size:1.4em;
+text-align:center;
+}
+
+h3 {
+color: #4D1A1A;
+font-weight:bold;
+margin-bottom: 0;
+}
+
+#navigation h3 {
+border-bottom: 1px dotted #4D1A1A;
+padding-bottom: .25em;
+margin-bottom: 0;
+}
+
+
+img {
+border:none;
+margin:0;
+padding:0;
+}
+
+.bold {
+font-weight:700;
+}
+
+.center {
+text-align:center;
+}
+
+.message {
+font-weight:700;
+text-align:center;
+color:red;
+font-size:1.1em;
+}
+
+.button {
+background-color:#333399;
+color:#FFF;
+cursor:pointer;
+font-size: 100%;
+font-weight:700;
+padding-top:.2em;
+padding-bottom: .2em;
+border: none;
+}
+
+.small {
+font-size:small;
+}
+
+/* for highlighting search results */
+.highlight0 {
+/* background-color:#FF6; */
+}
+
+.highlight1 {
+/* background-color:#A0FFFF; */
+}
+
+.highlight2 {
+/* background-color:#9F9; */
+}
+
+.highlight3 {
+/* background-color:#F99; */
+}
+
+.highlight4 {
+/* background-color:#F6F; */
+}
+
+.highlight5 {
+/* background-color:#800; */
+}
+
+.highlight6 {
+/* background-color:#0A0; */
+}
+
+.highlight7 {
+/* background-color:#886800; */
+}
+
+/* .highlight8 {
+ * background-color:#004699; */
+}
+
+.highlight9 {
+/* background-color:#909; */
+}
+
+h1#titleheader {
+width: 100%;
+clear: both;
+padding-top:1em;
+}
+
+#archoninfo {display: none;}
+
+br.clear {clear: both;}
+
+/* END GENERAL STYLES -- BEGIN THEME STRUCTURES/FORMATTING */
+
+/* Global */
+
+div#page, div#header, div#footer {
+width: 960px;
+margin: 0 auto;
+}
+
+div#page {
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+height: 100%;
+overflow: auto;
+}
+
+div.nav-page {
+background: #fff url(images/nav-bg.png) 0 4em repeat-y;
+}
+
+
+#header {position:relative; padding-top: 25px;}
+
+#header a {
+text-decoration: none;
+}
+
+#dept a {
+margin: 0;
+padding:0;
+height: auto;
+line-height: auto; 
+font-size: .9em;
+}
+
+#dept {
+ margin-left: .5em;
+
+}
+
+#univ {
+position: absolute;
+top: 0;
+right: .5em; text-align: right;
+}
+
+
+#lib-tech-logo {
+margin-top: -10px;
+}
+
+
+#univ a, #univ a:hover, #univ a:active, #univ a:visited {
+color: #000000;
+background:none;
+margin: 0;
+padding:0;
+height: auto;
+line-height: auto; 
+}
+
+
+#dept a,  #dept a:hover, #dept a:active, #dept a:visited {
+color: #4D1A1A;
+background:none;
+}
+
+
+#site-title a {
+font-size:2em;
+font-family: Georgia, "Times New Roman",  Times,  serif;
+font-weight: normal;
+margin-left: .5em;
+text-decoration:none;
+}
+
+#site-title {
+background-color:#1A1A4D;
+height: 4em;
+line-height: 4em;
+border-bottom: .5em solid #333399;
+width: 100%;
+clear:both;
+display:block;
+
+}
+
+
+#site-title a, #site-title a:active, #site-title a:hover, #site-title a:visited {
+color: #fff;
+}
+
+#breadcrumbblock {
+font-size: .95em;
+margin-top: .5em;
+}
+
+div#footer {
+margin-top: 1em;
+width: 100%;
+clear: both;
+}
+div#footer p {
+text-align:center;
+font-size: .7em;
+margin: 0;
+}
+
+div#admin {
+width: 100%;
+}
+
+
+div#navigation {
+width: 180px;
+float: left;
+}
+
+div.navblock {
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 1.5em;
+}
+
+div.navblock ul {
+list-style-type: none;
+margin: 1em 0 0 .5em;
+padding: 0;
+}
+
+div.navblock ul li {
+margin: .5em 0;
+padding: 0;
+}
+
+div.navblock ul li a {
+text-decoration: none;
+line-height: 1.2em;
+
+}
+
+div#main {
+width: 770px;
+float: left;
+}
+
+div#inner-main {
+margin-left: 10px;
+}
+
+
+#collection-buttons {
+width: 26em;
+float:right;
+text-align: right;
+}
+
+#ccardprintcontact {display:none;}
+
+a#fa-link, a#print-link {
+display: block;
+width: 12em;
+float: right;
+margin-right: 1em;
+background-color: #333399;
+background-position:.2em .3em;
+background-repeat: no-repeat;
+color: #fff;
+text-decoration:none;
+height: 2em;
+line-height: 2em;
+text-align: center;
+}
+
+a#fa-link {
+background-image:url(images/fa-icon.png);
+}
+
+a#print-link {
+background-image:url(images/print-icon.png);
+}
+
+
+
+/* in index.php */
+div.home-col {
+width:320px;
+float: left;
+
+}
+
+div.home-col img, div.home-col form,  div.home-col ul, div.home-col p, div.home-col p,div.home-col h2, div.home-col h3, div#home-search {
+margin-left: 10px;
+margin-right: 10px;
+width: 300px;
+}
+
+div.home-col h2 {
+color: #4D1A1A;
+text-transform:uppercase;
+border-bottom: 1px dotted #4D1A1A;
+font-weight: normal;
+text-align: left;
+padding-bottom: .2em;
+}
+
+div#home-search {
+background-color: #D9D9F2;
+padding-top: .5em;
+padding-bottom: .5em;
+}
+/*
+ * div#home-search div p {
+ * font-size: .9em;
+ * }
+ * */
+
+div#home-search {
+margin-bottom: 1em;
+}
+
+div#home-search span {
+margin-top: .5em;
+display:block;
+}
+
+div#home-search form, div#home-search p {
+margin-left: 10px;
+margin-right: 10px;
+width: 280px;
+
+}
+
+ul#home-browse {
+list-style-type:none;
+border-bottom: 1px dotted #ccc;
+padding: 0;
+margin-top: .75em;
+}
+
+ul#home-browse li a, ul#home-browse li a:active, ul#home-browse li a:visited, ul#home-browse li a:hover {
+display:block;
+margin: 0;
+padding: 0;
+border-top: 1px dotted #ccc;
+height: 2.6em;
+line-height: 2.6em;
+font-size: 1.3em;
+text-decoration: none;
+color: #333399;
+}
+
+
+
+/* END THEME STRUCTURES/FORMATTING -- BEGIN PUBLIC FILE FORMATTING */
+
+/* used in search.php */
+.searchTitleAndResults {
+margin-bottom:1em;
+}
+
+#AccessionTitle {
+font-weight:700;
+}
+
+#AccessionResults {;
+margin-left:1.5em;
+padding-left:1em;
+text-indent:-1em;
+}
+
+#BookTitle {
+font-weight:700;
+}
+
+#BookResults {
+margin-left:1.5em;
+padding-left:1em;
+text-indent:-1em;
+}
+
+#CollectionTitle {
+font-weight:700;
+}
+
+#CollectionResults {
+padding-left:1em;
+text-indent:-1em;
+}
+
+.InnerContentResultsToggle {
+margin:1em 0;
+display:block;
+}
+
+#CollectionContentTitle {
+font-weight:700;
+}
+
+#CollectionContentResults {
+margin-left:1.5em;
+padding-left:1em;
+text-indent:-1em;
+}
+
+.CollectionClassEnabledResults {
+padding-bottom:1em;
+}
+
+.CollectionClassEnabledResults dd {
+margin-bottom:2em;
+}
+
+.InnerContentTitleAndResults {
+margin-top:-0.5em;
+}
+
+.InnerCollectionContentResults {
+margin-left:1.5em;
+padding-left:1em;
+text-indent:-1em;
+}
+
+
+#DigitalContentTitle {
+font-weight:700;
+}
+
+#DigitalContentResults {
+margin-left:1.5em;
+padding-left:1em;
+text-indent:-1em;
+}
+
+#SubjectTitle {
+font-weight:700;
+}
+
+#SubjectResults {
+margin-left:1.5em;
+padding-left:1em;
+text-indent:-1em;
+}
+
+#CreatorTitle {
+font-weight:700;
+}
+
+
+#CreatorNote hr { 
+width:50%;
+}
+
+.CreatorEntry
+{
+margin-bottom:1em;
+}
+
+.CreatorEntryShowList {
+margin-left:1.5em;
+}
+
+#CreatorResults {
+font-weight: bold;
+margin:2em 0 1em 0;
+padding-left:1em;
+text-indent:-1em;
+}
+
+
+#CreatorStaff {
+clear:left;
+float:left;
+width:30%;
+border:1px solid #ddd;
+background:#fff url('images/contentsgradient.gif') repeat-x top left;
+margin: 0 auto;
+padding:1em;
+}
+
+
+/* For browse by pages */
+
+
+/* digitallibrary/digitallibrary */
+#dlsearchblock {
+background:#DDE7F6;
+background-image:url('images/searchbargradient.gif');
+background-position:bottom right;
+background-repeat:repeat-x;
+border-right:1px solid #C4D7F4;
+border-left:1px solid #C4D7F4;
+border-bottom:1px solid #C4D7F4;
+overflow:hidden;
+width:30em;
+margin:-1.5em auto 1em;
+padding:0.8em 1em;
+}
+
+#dlsearchblock input {
+border:1px solid #bbe;
+vertical-align:middle;
+font-size:1.33em;
+margin:.3em 0;
+}
+
+#dlsearchblock label {
+font-size:0.8em;
+vertical-align:middle;
+padding-left:0.3em;
+margin:.3em 0;
+}
+
+#dlsearchblock .button {
+background:#eef;
+background-image:url('images/magglass.png');
+background-position:5% 50%;
+background-repeat:no-repeat;
+border:1px solid #bbe;
+border-left:none;
+cursor:pointer;
+font-size:1.33em;
+font-weight:100;
+padding-left:1.6em;
+color:#99f;
+max-height:1.5em;
+min-width:1.33em;
+margin:.3em 0.6em .3em -0.25em;
+}
+
+#dlsearchblock .button:hover {
+background:#FEF1B5;
+background-image:url('images/magglass.png');
+background-position:5% 50%;
+background-repeat:no-repeat;
+color:#889;
+}
+
+#dlsearchblock img {
+vertical-align:middle;
+margin:.3em 0;
+padding:0 0 0 0.3em;
+}
+
+/* END PUBLIC FILE FORMATTING -- BEGIN  TEMPLATE FILE FORMATTING*/
+
+
+/* used template's classification.php */
+
+#classificationdesc {
+background-color:#E8EEF7;
+background-image:url('images/maingradient.gif');
+background-position:top right;
+background-repeat:repeat-x;
+border:1px solid #E8EEF7;
+width:45%;
+margin:auto;
+line-height:1.5em;
+min-height:80px;
+padding:.5em 1em;
+}
+
+
+
+/* used in default template's controlcard.inc.php */
+
+
+
+
+
+#ccardleft {
+clear:left;
+float:left;
+width:400px;
+}
+
+
+
+#ccardstaff {
+display: none;
+}
+
+#ccardprintcontact {
+float:right;
+font-weight:400;
+margin-bottom:1em;
+padding:.5em 1em;
+}
+
+#ccardscope {
+float:right;
+width:300px;
+padding-left: 10px;
+margin-right: 10px;
+border-left: 1px solid #CCC;
+}
+
+
+.ccardlabel {
+font-weight:700;
+color: #4D1A1A;
+}
+
+
+.ccardcontent {
+clear:left;
+display:block;
+float:left;
+width:100%;
+margin:.5em .5em .5em 0;
+}
+
+
+
+#locationtable {
+border-collapse:collapse;
+border:solid 1px #ddd;
+margin-left:1em;
+}
+
+#locationtable th {
+background:#f3f3f3;
+padding:0.3em;
+}
+
+#locationtable tr {
+padding:0.5em;
+}
+
+.oddtablerow {
+background:#f9f9f9;
+}
+
+/* used in default template's accession.inc.php */
+
+#accessionleft {
+clear:left;
+float:left;
+width:45%;
+}
+
+#accessionpublic {
+clear:left;
+float:left;
+width:100%;
+border:1px solid #ddd;
+padding:1em;
+background:#fff url('images/contentsgradient.gif') repeat-x top left;
+margin:1em;
+margin-top:0;
+}
+
+#accessionstaff {
+clear:left;
+float:left;
+width:100%;
+border:1px solid #ddd;
+padding:1em;
+background:#fff url('images/contentsgradient.gif') repeat-x top left;
+margin:1em;
+margin-top:0;
+}
+
+#accessionprintcontact {
+float:right;
+font-weight:700;
+margin-bottom:1em;
+}
+
+#accessionscope {
+background-color:#E8EEF7;
+background-image:url('images/maingradient.gif');
+background-position:top right;
+background-repeat:repeat-x;
+border:1px solid #E8EEF7;
+float:right;
+min-height:80px;
+padding:.5em 1em;
+width:45%;
+line-height:1.5em;
+}
+
+
+
+#alternateaccessions {
+margin-left:1em;
+}
+
+.accessionlabel {
+font-weight:700;
+}
+
+.accessionstafflabel {
+color:red;
+}
+
+.accessioncontent {
+clear:left;
+display:block;
+float:left;
+margin:.5em .5em .5em 0;
+width:100%;
+}
+
+.accessionserieslist {
+margin-left:1em;
+text-indent:-0.5em;
+}
+
+.accessionshowlist {
+margin-left:1em;
+}
+
+#locationtable {
+border-collapse:collapse;
+margin-top:1em;
+}
+
+#accessionnotice {
+background-color:#eee;
+padding:0.5em;
+border:1px solid #ddd;
+margin-top:0.75em;
+}
+
+/*used in default template's collection.inc.php 
+ *
+ * .faitem {
+ * margin-bottom:5px;
+ * }
+ *
+ * .faitemcontent {
+ * margin:3px 15px 5px 0;
+ * }
+ * */
+/* Used in default template's digitalcontent.inc.php  */
+#digcontentwrapper{ /*to display info in columns*/
+width:100%;
+}
+
+#digcontentwrapper hr {
+background-color:#FFDB4D;
+border:none;
+color:#FFDB4D;
+width:100%;
+}
+
+
+#digcontentfiles {
+float:left;
+width:30%;
+max-width:402px;
+padding:8px;
+background:#f3f3fd url('images/thumbnail.gif') repeat-x top left;
+border:#bbd solid 1px;
+text-align:center;
+}
+
+#digcontentmetadata {
+border:1px solid #ddd;
+padding:1em;
+background:#fff url('images/contentsgradient.gif') repeat-x top left;
+float:left;
+margin-bottom:2em;
+margin-left:.5em;
+width:60%;
+line-height:1.25em;
+}
+
+.digcontentlabel {
+clear:left;
+display:block;
+float:left;
+font-weight:700;
+width:7em;
+}
+
+.digcontentdata {
+display:block;
+float:left;
+left:.5em;
+margin-bottom:.3em;
+position:relative;
+width:80%;
+}
+
+.digcontentrequest {
+font-weight:700;
+}
+
+img.digcontentfile {
+width:auto;
+max-width:100%;
+text-align:center;
+margin:0 auto;
+border:1px solid #ccc;
+padding:0;
+}
+
+.digcontentfiletitle {
+
+}
+
+.digcontenttitlebox{
+background:#dcdcfd;
+margin:0 10px 2em 10px;
+padding:1em;
+text-align:left;
+}
+
+/* used in various research pages */
+.userformbox {
+background-color:#f0efef;
+background-image:url('images/listitem.gif');
+background-position:top right;
+background-repeat:repeat-x;
+border:1px solid #E8EEF7;
+font-size:small;
+margin:0 auto;
+padding:0 .5em 1em .5em;
+max-width:40em;
+}
+
+.userformbox:after {
+clear:both;
+content:".";
+display:block;
+font-size:0;
+height:0;
+visibility:hidden;
+}
+
+#userformsubmit {
+clear:left;
+text-align:center;
+}
+
+.userformpair {
+clear:left;
+margin:0;
+padding:0.5em;
+text-align:left;
+}
+
+.userformlabel {
+font-weight:700;
+text-align:left;
+font-size:85%;
+margin:0 .5em 0 0;
+}
+
+.userforminput {
+text-align:left;
+margin:0 0 1.4em;
+}
+
+.userformdate {
+font-weight:lighter;
+font-size:95%;
+font-style:italic;
+}
+
+#requestimagebox {
+background-color:#E8EEF7;
+border:outset;
+font-size:small;
+margin-bottom:1em;
+padding:5px;
+}
+
+#researchcart {
+background-color:#efefef;
+border:1px #ddd solid;
+width:60em;
+margin:1em auto;
+padding:1em;
+}
+
+#researchcartwrapper {
+width:100%;
+}
+
+#researchcartinfo {
+background-color:#f0efef;
+background-image:url('images/listitem.gif');
+background-position:top right;
+background-repeat:repeat-x;
+border:1px solid #E8EEF7;
+font-size:small;
+margin:0 auto;
+padding:1em .5em 1em .5em;
+max-width:60em;
+}
+
+/* used in digitallibrary/thumbnails */
+.thumbnailimg {
+float:left;
+height:12em;
+width:10em;
+background:#f3f3fd url('images/thumbnail.gif') repeat-x top left;
+border:1px solid #dcdcfd;
+margin:1em;
+padding:0.75em 0 0;
+}
+
+.thumbnailimg:hover {
+background:#FEF1B5;
+}
+
+.thumbnailimg:after {
+clear:left;
+content:".";
+display:block;
+font-size:0;
+height:0;
+overflow:hidden;
+visibility:hidden;
+}
+
+.thumbnailimg .thumbnailimgwrapper {
+height:10em;
+width:10em;
+}
+
+.thumbnailimg img {
+display:block;
+border:1px solid #aaa;
+max-width:100px;
+max-height:130px;
+clear:both;
+margin-left:auto;
+margin-right:auto;
+}
+
+.thumbnailimg .thumbnailcaption {
+display:block;
+text-align:center;
+clear:both;
+margin-left:auto;
+margin-right:auto;
+background:#eee url('images/caption.gif') repeat-x bottom left;
+height:2.6em;
+border-top:1px solid #ccc;
+}
+
+.thumbnailimg a {
+text-decoration:none;
+}
+
+#mediumpreviewimg {
+width:300px;
+border:1px solid #aaa;
+}
+
+#thumbnailnav {
+clear:both;
+border:1px solid #e6e6e6;
+width:30%;
+background:#fafafa;
+font-weight:bolder;
+color:#33b;
+margin:0 auto;
+padding:0.75em;
+}
+
+#thumbnailnav:after {
+clear:both;
+content:".";
+display:block;
+font-size:0;
+height:0;
+overflow:hidden;
+visibility:hidden;
+}
+
+#thumbnailprevlink {
+float:left;
+}
+
+#thumbnailnextlink {
+float:right;
+}
+
+/* Style overrides for */
+img.cart{ display:none;}
+.digcontentrequest { display:none;}
+dl#CollectionResults {display: block !important;}
+dl#CreatorResults {display: block !important;}
+#CollectionTitle a img {display: none;}
+#CollectionTitle a {text-decoration: none; color: #000; font-size: 1.2em;}
+#CreatorTitle a img {display: none;}
+#CreatorTitle a {text-decoration: none; color: #000; font-size: 1.2em;}
+dl#SubjectResults {display: block !important;}
+#SubjectTitle a img {display: none;}
+#SubjectTitle a {text-decoration: none; color: #000; font-size: 1.2em;}
+#SubjectResults dt a p {text-decoration: underline;}
+#SubjectResults dt {margin-top: 1em;}
+.listitemhead {display: none;} 
+div#LinkedCollectionsResults {display: block !important;}
+img#LinkedCollectionsImage {display:none;}
+.CreatorEntry a {text-decoration: none; color: #000; font-size: 1.2em;}
+.CreatorEntry div#LinkedCollectionsResults a {text-decoration: underline; color: #333399; font-size: 1em;}
