@@ -14,3 +14,34 @@
 .brandeis_footer p {
 	margin-bottom: 1px;
 }
+
+#header {position:relative; padding-top: 25px;}
+
+#header a {
+text-decoration: none;
+}
+
+#dept a {
+margin: 0;
+padding:0;
+height: auto;
+line-height: auto;
+font-size: .9em;
+}
+
+#dept {
+ margin-left: .5em;
+
+}
+
+#univ {
+position: absolute;
+top: 0;
+right: .5em; text-align: right;
+margin-top: -10px;
+}
+
+#dept a,  #dept a:hover, #dept a:active, #dept a:visited {
+color: #4D1A1A;
+background:none;
+}
