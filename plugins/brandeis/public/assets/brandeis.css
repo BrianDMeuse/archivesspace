@@ -6,8 +6,11 @@
 }
 
 .brandeis_footer{
-	padding-top: 5px;
+	padding-top: 1px;
 	font-size: .7em;
 	text-align: center;
 }
 
+.brandeis_footer p {
+	margin-bottom: 1px;
+}
