@@ -1,6 +1,6 @@
 # Configuration defaults are shown below
 
-#AppConfig[:default_admin_password] = "admin"
+
 #AppConfig[:data_directory] = File.join(Dir.home, "ArchivesSpace")
 #AppConfig[:backup_directory] = proc { File.join(AppConfig[:data_directory], "demo_db_backups") }
 #AppConfig[:solr_index_directory] = proc { File.join(AppConfig[:data_directory], "solr_index") }
@@ -8,11 +8,11 @@
 #AppConfig[:solr_indexing_frequency_seconds] = 30
 #AppConfig[:solr_facet_limit] = 100
 #
-#AppConfig[:default_page_size] = 10
+AppConfig[:default_page_size] = 25
 #AppConfig[:max_page_size] = 250
 #
 ## Log level for the backend, values: (everything) debug, info, warn, error, fatal (severe only)
-#AppConfig[:backend_log_level] = "debug"
+AppConfig[:backend_log_level] = "error"
 #
 ## A prefix added to cookies used by the application.
 ##
@@ -31,10 +31,10 @@
 #AppConfig[:indexer_solr_timeout_seconds] = 300
 #
 #AppConfig[:allow_other_unmapped] = false
-#
 AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=as&password=as123&useUnicode=true&characterEncoding=UTF-8"
 #AppConfig[:db_url] = proc { AppConfig.demo_db_url }
 #AppConfig[:db_url_redacted] = proc { AppConfig[:db_url].gsub(/(user|password)=(.*?)&/, '\1=[REDACTED]&') }
+AppConfig[:db_max_connections] = 10
 #AppConfig[:db_max_connections] = proc { 20 + (AppConfig[:indexer_thread_count] * 2) }
 #
 ## Set to true to log all SQL statements.  Note that this will have a performance
@@ -55,7 +55,8 @@ AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=as&password
 #AppConfig[:solr_backup_number_to_keep] = 1
 #
 #AppConfig[:backend_url] = "http://localhost:8089"
-#AppConfig[:frontend_url] = "http://localhost:8080"
+AppConfig[:frontend_url] = "https://localhost:8080"
+AppConfig[:public_url]   = "http://localhost:8081"
 #
 ## Proxy URLs
 ## If you are serving user-facing applications via proxy
@@ -63,6 +64,8 @@ AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=as&password
 ## recommended that you record those URLs in your configuration
 #AppConfig[:frontend_proxy_url] = proc { AppConfig[:frontend_url] }
 #AppConfig[:public_proxy_url] = proc { AppConfig[:public_url] }
+#AppConfig[:frontend_proxy_url] = "https://aspace.library.brandeis.edu"
+#AppConfig[:public_proxy_url] = "http://findingaids.brandeis.edu"
 #
 ## Don't override _prefix or _proxy_prefix unless you know what you're doing
 #AppConfig[:frontend_prefix] = proc { "#{URI(AppConfig[:frontend_url]).path}/".gsub(%r{/+$}, "/") }
@@ -142,7 +145,6 @@ AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=as&password
 ## Plug-ins to load. They will load in the order specified
 #AppConfig[:plugins] = ['local',  'lcnaf', 'aspace-public-formats']
 AppConfig[:plugins] = ['brandeis', 'aspace-public-formats']
-#
 ## URL to direct the feedback link
 ## You can remove this from the footer by making the value blank.
 #AppConfig[:feedback_url] = "http://archivesspace.org/feedback"
@@ -155,10 +157,11 @@ AppConfig[:plugins] = ['brandeis', 'aspace-public-formats']
 #AppConfig[:public_formats_digital_object_links] = []
 #AppConfig[:xsltproc_path] = nil
 #AppConfig[:xslt_path] = nil
+AppConfig[:public_formats_resource_links] = ["ead_pdf"]
 #
 #
 ## Allow an unauthenticated user to create an account
-#AppConfig[:allow_user_registration] = true
+AppConfig[:allow_user_registration] = false
 #
 ## Help Configuration
 #AppConfig[:help_enabled] = true
@@ -202,7 +205,7 @@ AppConfig[:plugins] = ['brandeis', 'aspace-public-formats']
 ## position setting. This will resequence these tree nodes prior to startup.
 ## If is recogmended that this be used very infrequently and should not be set
 ## to true for all startups ( as it will take a considerable amount of time )
-#AppConfig[:resequence_on_startup] = false
+#AppConfig[:resequence_on_startup] = true
 #
 ## This is a URL that points to some demo data that can be used for testing,
 ## teaching, etc. To use this, set an OS environment variable of ASPACE_DEMO = true
