@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Module: ASUtils
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.0
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "ASUtils";
   relpath = '';
-  framesUrl = "frames.html#!ASUtils.html";
 </script>
 
 
@@ -28,66 +27,63 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index (A)</a> &raquo;
     
     
     <span class="title">ASUtils</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
-    </a>
-  
-    <a class="full_list_link" id="schema_list_link"
-        href="schema_list.html">
-      Schema List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="class_list.html"></iframe>
 
-    <div id="content"><h1>Module: ASUtils
+      <div id="content"><h1>Module: ASUtils
   
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
-  
-  
-    
-  
-    
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">common/asutils.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>common/asutils.rb</dd>
+  </dl>
+  
+</div>
 
 
 
@@ -99,7 +95,7 @@
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -107,7 +103,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#as_array-class_method" title="as_array (class method)">+ (Object) <strong>as_array</strong>(thing) </a>
+      <a href="#as_array-class_method" title="as_array (class method)">.<strong>as_array</strong>(thing)  &#x21d2; Object </a>
     
 
     
@@ -130,7 +126,30 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#deep_merge-class_method" title="deep_merge (class method)">+ (Object) <strong>deep_merge</strong>(hash1, hash2) </a>
+      <a href="#blank%3F-class_method" title="blank? (class method)">.<strong>blank?</strong>(obj)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deep_merge-class_method" title="deep_merge (class method)">.<strong>deep_merge</strong>(hash1, hash2)  &#x21d2; Object </a>
     
 
     
@@ -153,7 +172,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#dump_diagnostics-class_method" title="dump_diagnostics (class method)">+ (Object) <strong>dump_diagnostics</strong>(exception = nil) </a>
+      <a href="#dump_diagnostics-class_method" title="dump_diagnostics (class method)">.<strong>dump_diagnostics</strong>(exception = nil)  &#x21d2; Object </a>
     
 
     
@@ -176,7 +195,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#extract_nested_strings-class_method" title="extract_nested_strings (class method)">+ (Object) <strong>extract_nested_strings</strong>(coll) </a>
+      <a href="#extract_nested_strings-class_method" title="extract_nested_strings (class method)">.<strong>extract_nested_strings</strong>(coll)  &#x21d2; Object </a>
     
 
     
@@ -199,7 +218,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#find_base_directory-class_method" title="find_base_directory (class method)">+ (Object) <strong>find_base_directory</strong>(root = nil) </a>
+      <a href="#find_base_directory-class_method" title="find_base_directory (class method)">.<strong>find_base_directory</strong>(root = nil)  &#x21d2; Object </a>
     
 
     
@@ -222,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#find_local_directories-class_method" title="find_local_directories (class method)">+ (Object) <strong>find_local_directories</strong>(base = nil, *plugins) </a>
+      <a href="#find_local_directories-class_method" title="find_local_directories (class method)">.<strong>find_local_directories</strong>(base = nil, *plugins)  &#x21d2; Object </a>
     
 
     
@@ -245,7 +264,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#find_locales_directories-class_method" title="find_locales_directories (class method)">+ (Object) <strong>find_locales_directories</strong>(base = nil) </a>
+      <a href="#find_locales_directories-class_method" title="find_locales_directories (class method)">.<strong>find_locales_directories</strong>(base = nil)  &#x21d2; Object </a>
     
 
     
@@ -268,7 +287,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_diagnostics-class_method" title="get_diagnostics (class method)">+ (Object) <strong>get_diagnostics</strong>(exception = nil) </a>
+      <a href="#get_diagnostics-class_method" title="get_diagnostics (class method)">.<strong>get_diagnostics</strong>(exception = nil)  &#x21d2; Object </a>
     
 
     
@@ -291,7 +310,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#json_parse-class_method" title="json_parse (class method)">+ (Object) <strong>json_parse</strong>(s) </a>
+      <a href="#json_parse-class_method" title="json_parse (class method)">.<strong>json_parse</strong>(s)  &#x21d2; Object </a>
     
 
     
@@ -314,7 +333,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#jsonmodels_to_hashes-class_method" title="jsonmodels_to_hashes (class method)">+ (Object) <strong>jsonmodels_to_hashes</strong>(elt) </a>
+      <a href="#jsonmodels_to_hashes-class_method" title="jsonmodels_to_hashes (class method)">.<strong>jsonmodels_to_hashes</strong>(elt)  &#x21d2; Object </a>
     
 
     
@@ -337,7 +356,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#keys_as_strings-class_method" title="keys_as_strings (class method)">+ (Object) <strong>keys_as_strings</strong>(hash) </a>
+      <a href="#keys_as_strings-class_method" title="keys_as_strings (class method)">.<strong>keys_as_strings</strong>(hash)  &#x21d2; Object </a>
     
 
     
@@ -360,7 +379,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#load_plugin_gems-class_method" title="load_plugin_gems (class method)">+ (Object) <strong>load_plugin_gems</strong>(context) </a>
+      <a href="#load_plugin_gems-class_method" title="load_plugin_gems (class method)">.<strong>load_plugin_gems</strong>(context)  &#x21d2; Object </a>
     
 
     
@@ -383,7 +402,53 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#search_nested-class_method" title="search_nested (class method)">+ (Object) <strong>search_nested</strong>(hash, key) </a>
+      <a href="#present%3F-class_method" title="present? (class method)">.<strong>present?</strong>(obj)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recursive_reject_key-class_method" title="recursive_reject_key (class method)">.<strong>recursive_reject_key</strong>(obj, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>recursively walk <code>obj</code> and remove any hash entry whose key returns <code>true</code> for <code>block.call(key)</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#search_nested-class_method" title="search_nested (class method)">.<strong>search_nested</strong>(hash, key)  &#x21d2; Object </a>
     
 
     
@@ -406,7 +471,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#tempfile-class_method" title="tempfile (class method)">+ (Object) <strong>tempfile</strong>(base) </a>
+      <a href="#tempfile-class_method" title="tempfile (class method)">.<strong>tempfile</strong>(base)  &#x21d2; Object </a>
     
 
     
@@ -429,7 +494,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_json-class_method" title="to_json (class method)">+ (Object) <strong>to_json</strong>(obj, opts = {}) </a>
+      <a href="#to_json-class_method" title="to_json (class method)">.<strong>to_json</strong>(obj, opts = {})  &#x21d2; Object </a>
     
 
     
@@ -452,7 +517,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#wrap-class_method" title="wrap (class method)">+ (Object) <strong>wrap</strong>(object) </a>
+      <a href="#wrap-class_method" title="wrap (class method)">.<strong>wrap</strong>(object)  &#x21d2; Object </a>
     
 
     
@@ -484,7 +549,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="as_array-class_method">
   
-    + (<tt>Object</tt>) <strong>as_array</strong>(thing) 
+    .<strong>as_array</strong>(thing)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -515,9 +580,75 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="blank?-class_method">
+  
+    .<strong>blank?</strong>(obj)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224
+225
+226
+227
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 222</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_blank? fid id'>blank?</span><span class='lparen token'>(</span><span class='rubyid_obj identifier id'>obj</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+    <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_elsif elsif kw'>elsif</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:empty?</span><span class='rparen token'>)</span>
+    <span class='notop op'>!</span><span class='notop op'>!</span><span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='notop op'>!</span><span class='rubyid_obj identifier id'>obj</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="deep_merge-class_method">
   
-    + (<tt>Object</tt>) <strong>deep_merge</strong>(hash1, hash2) 
+    .<strong>deep_merge</strong>(hash1, hash2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -539,6 +670,9 @@
       <pre class="lines">
 
 
+154
+155
+156
 157
 158
 159
@@ -546,13 +680,10 @@
 161
 162
 163
-164
-165
-166
-167</pre>
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 154</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_deep_merge identifier id'>deep_merge</span><span class='lparen token'>(</span><span class='rubyid_hash1 identifier id'>hash1</span><span class='comma token'>,</span> <span class='rubyid_hash2 identifier id'>hash2</span><span class='rparen token'>)</span>
   <span class='rubyid_target identifier id'>target</span> <span class='assign token'>=</span> <span class='rubyid_hash1 identifier id'>hash1</span><span class='dot token'>.</span><span class='rubyid_dup identifier id'>dup</span>
@@ -574,7 +705,7 @@
       <div class="method_details ">
   <h3 class="signature " id="dump_diagnostics-class_method">
   
-    + (<tt>Object</tt>) <strong>dump_diagnostics</strong>(exception = nil) 
+    .<strong>dump_diagnostics</strong>(exception = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -586,6 +717,9 @@
       <pre class="lines">
 
 
+128
+129
+130
 131
 132
 133
@@ -597,17 +731,14 @@
 139
 140
 141
-142
-143
-144
-145</pre>
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 128</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_dump_diagnostics identifier id'>dump_diagnostics</span><span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
   <span class='rubyid_diagnostics identifier id'>diagnostics</span> <span class='assign token'>=</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_diagnostics identifier id'>get_diagnostics</span><span class='lparen token'>(</span> <span class='rubyid_exception identifier id'>exception</span> <span class='rparen token'>)</span> 
-  <span class='rubyid_tmp identifier id'>tmp</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_Dir constant id'>Dir</span><span class='dot token'>.</span><span class='rubyid_tmpdir identifier id'>tmpdir</span><span class='comma token'>,</span> <span class='dstring node'>&quot;aspaue_diagnostic_#{Time.now.to_i}.txt&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_tmp identifier id'>tmp</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_Dir constant id'>Dir</span><span class='dot token'>.</span><span class='rubyid_tmpdir identifier id'>tmpdir</span><span class='comma token'>,</span> <span class='dstring node'>&quot;aspace_diagnostic_#{Time.now.to_i}.txt&quot;</span><span class='rparen token'>)</span>
   <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_tmp identifier id'>tmp</span><span class='comma token'>,</span> <span class='string val'>&quot;w&quot;</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_fh identifier id'>fh</span><span class='bitor op'>|</span>
     <span class='rubyid_fh identifier id'>fh</span><span class='dot token'>.</span><span class='rubyid_write identifier id'>write</span><span class='lparen token'>(</span><span class='rubyid_JSON constant id'>JSON</span><span class='dot token'>.</span><span class='rubyid_pretty_generate identifier id'>pretty_generate</span><span class='lparen token'>(</span><span class='rubyid_diagnostics identifier id'>diagnostics</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
   <span class='rubyid_end end kw'>end</span>
@@ -629,7 +760,7 @@
       <div class="method_details ">
   <h3 class="signature " id="extract_nested_strings-class_method">
   
-    + (<tt>Object</tt>) <strong>extract_nested_strings</strong>(coll) 
+    .<strong>extract_nested_strings</strong>(coll)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -672,7 +803,7 @@
       <div class="method_details ">
   <h3 class="signature " id="find_base_directory-class_method">
   
-    + (<tt>Object</tt>) <strong>find_base_directory</strong>(root = nil) 
+    .<strong>find_base_directory</strong>(root = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -711,7 +842,7 @@
       <div class="method_details ">
   <h3 class="signature " id="find_local_directories-class_method">
   
-    + (<tt>Object</tt>) <strong>find_local_directories</strong>(base = nil, *plugins) 
+    .<strong>find_local_directories</strong>(base = nil, *plugins)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -746,7 +877,7 @@
       <div class="method_details ">
   <h3 class="signature " id="find_locales_directories-class_method">
   
-    + (<tt>Object</tt>) <strong>find_locales_directories</strong>(base = nil) 
+    .<strong>find_locales_directories</strong>(base = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -777,7 +908,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_diagnostics-class_method">
   
-    + (<tt>Object</tt>) <strong>get_diagnostics</strong>(exception = nil) 
+    .<strong>get_diagnostics</strong>(exception = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -803,10 +934,7 @@
 123
 124
 125
-126
-127
-128
-129</pre>
+126</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'common/asutils.rb', line 112</span>
@@ -814,10 +942,7 @@
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_diagnostics identifier id'>get_diagnostics</span><span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span> <span class='rparen token'>)</span>
    <span class='rubyid_runtime identifier id'>runtime</span> <span class='assign token'>=</span> <span class='rubyid_java identifier id'>java</span><span class='dot token'>.</span><span class='rubyid_lang identifier id'>lang</span><span class='dot token'>.</span><span class='rubyid_Runtime constant id'>Runtime</span><span class='dot token'>.</span><span class='rubyid_getRuntime identifier id'>getRuntime</span>
   <span class='lbrace token'>{</span>
-     <span class='symbol val'>:version</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='rubyid_ASConstants constant id'>ASConstants</span><span class='dot token'>.</span><span class='rubyid_VERSION constant id'>VERSION</span><span class='comma token'>,</span>  
-     <span class='symbol val'>:environment</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_java identifier id'>java</span><span class='dot token'>.</span><span class='rubyid_lang identifier id'>lang</span><span class='dot token'>.</span><span class='rubyid_System constant id'>System</span><span class='dot token'>.</span><span class='rubyid_getenv identifier id'>getenv</span><span class='dot token'>.</span><span class='rubyid_to_hash identifier id'>to_hash</span><span class='comma token'>,</span>
-     <span class='symbol val'>:jvm_properties</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_java identifier id'>java</span><span class='dot token'>.</span><span class='rubyid_lang identifier id'>lang</span><span class='dot token'>.</span><span class='rubyid_System constant id'>System</span><span class='dot token'>.</span><span class='rubyid_getProperties identifier id'>getProperties</span><span class='dot token'>.</span><span class='rubyid_to_hash identifier id'>to_hash</span><span class='comma token'>,</span>
-     <span class='symbol val'>:globals</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_Hash constant id'>Hash</span><span class='lbrack token'>[</span><span class='rubyid_global_variables identifier id'>global_variables</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_v identifier id'>v</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='rubyid_v identifier id'>v</span><span class='comma token'>,</span> <span class='rubyid_eval identifier id'>eval</span><span class='lparen token'>(</span><span class='rubyid_v identifier id'>v</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='rparen token'>)</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+     <span class='symbol val'>:version</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='rubyid_ASConstants constant id'>ASConstants</span><span class='dot token'>.</span><span class='rubyid_VERSION constant id'>VERSION</span><span class='comma token'>,</span>
      <span class='symbol val'>:appconfig</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_AppConfig constant id'>AppConfig</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rubyid_AppConfig constant id'>AppConfig</span><span class='dot token'>.</span><span class='rubyid_dump_sanitized identifier id'>dump_sanitized</span> <span class='colon op'>:</span> <span class='string val'>&quot;not loaded&quot;</span><span class='comma token'>,</span>
      <span class='symbol val'>:memory</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
        <span class='symbol val'>:free</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_runtime identifier id'>runtime</span><span class='dot token'>.</span><span class='rubyid_freeMemory identifier id'>freeMemory</span><span class='comma token'>,</span>
@@ -838,7 +963,7 @@
       <div class="method_details ">
   <h3 class="signature " id="json_parse-class_method">
   
-    + (<tt>Object</tt>) <strong>json_parse</strong>(s) 
+    .<strong>json_parse</strong>(s)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -869,7 +994,7 @@
       <div class="method_details ">
   <h3 class="signature " id="jsonmodels_to_hashes-class_method">
   
-    + (<tt>Object</tt>) <strong>jsonmodels_to_hashes</strong>(elt) 
+    .<strong>jsonmodels_to_hashes</strong>(elt)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -922,7 +1047,7 @@
       <div class="method_details ">
   <h3 class="signature " id="keys_as_strings-class_method">
   
-    + (<tt>Object</tt>) <strong>keys_as_strings</strong>(hash) 
+    .<strong>keys_as_strings</strong>(hash)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -965,7 +1090,7 @@
       <div class="method_details ">
   <h3 class="signature " id="load_plugin_gems-class_method">
   
-    + (<tt>Object</tt>) <strong>load_plugin_gems</strong>(context) 
+    .<strong>load_plugin_gems</strong>(context)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -977,17 +1102,17 @@
       <pre class="lines">
 
 
+167
+168
+169
 170
 171
 172
 173
-174
-175
-176
-177</pre>
+174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 170</span>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 167</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_load_plugin_gems identifier id'>load_plugin_gems</span><span class='lparen token'>(</span><span class='rubyid_context identifier id'>context</span><span class='rparen token'>)</span>
   <span class='rubyid_ASUtils constant id'>ASUtils</span><span class='dot token'>.</span><span class='rubyid_find_local_directories identifier id'>find_local_directories</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_plugin identifier id'>plugin</span><span class='bitor op'>|</span>
@@ -1004,9 +1129,136 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="present?-class_method">
+  
+    .<strong>present?</strong>(obj)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 232</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_present? fid id'>present?</span><span class='lparen token'>(</span><span class='rubyid_obj identifier id'>obj</span><span class='rparen token'>)</span>
+  <span class='notop op'>!</span><span class='rubyid_blank? fid id'>blank?</span><span class='lparen token'>(</span><span class='rubyid_obj identifier id'>obj</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recursive_reject_key-class_method">
+  
+    .<strong>recursive_reject_key</strong>(obj, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>recursively walk <code>obj</code> and remove any hash entry whose key returns <code>true</code>
+for <code>block.call(key)</code>.</p>
+
+<p><code>obj</code> can be an arbitrarily nested combination of array-like and hash-like
+things.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 204</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_recursive_reject_key identifier id'>recursive_reject_key</span><span class='lparen token'>(</span><span class='rubyid_obj identifier id'>obj</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_block identifier id'>block</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='rubyid_block identifier id'>block</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+    <span class='rubyid_obj identifier id'>obj</span>
+  <span class='rubyid_elsif elsif kw'>elsif</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:each_pair</span><span class='rparen token'>)</span>
+    <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+    <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_each_pair identifier id'>each_pair</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span> <span class='rubyid_v identifier id'>v</span><span class='bitor op'>|</span>
+<span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_block identifier id'>block</span><span class='dot token'>.</span><span class='rubyid_call identifier id'>call</span><span class='lparen token'>(</span><span class='rubyid_k identifier id'>k</span><span class='rparen token'>)</span>
+  <span class='rubyid_result identifier id'>result</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_recursive_reject_key identifier id'>recursive_reject_key</span><span class='lparen token'>(</span><span class='rubyid_v identifier id'>v</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_block identifier id'>block</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_result identifier id'>result</span>
+  <span class='rubyid_elsif elsif kw'>elsif</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:map</span><span class='rparen token'>)</span>
+    <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_elt identifier id'>elt</span><span class='bitor op'>|</span> <span class='rubyid_recursive_reject_key identifier id'>recursive_reject_key</span><span class='lparen token'>(</span><span class='rubyid_elt identifier id'>elt</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_block identifier id'>block</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_obj identifier id'>obj</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="search_nested-class_method">
   
-    + (<tt>Object</tt>) <strong>search_nested</strong>(hash, key) 
+    .<strong>search_nested</strong>(hash, key)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1028,18 +1280,18 @@
       <pre class="lines">
 
 
+189
+190
+191
 192
 193
 194
 195
 196
-197
-198
-199
-200</pre>
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 189</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_search_nested identifier id'>search_nested</span><span class='lparen token'>(</span><span class='rubyid_hash identifier id'>hash</span><span class='comma token'>,</span><span class='rubyid_key identifier id'>key</span><span class='rparen token'>)</span>
   <span class='rubyid_if if kw'>if</span> <span class='rubyid_hash identifier id'>hash</span><span class='dot token'>.</span><span class='rubyid_respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:key?</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_hash identifier id'>hash</span><span class='dot token'>.</span><span class='rubyid_key? fid id'>key?</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='rparen token'>)</span>
@@ -1059,7 +1311,7 @@
       <div class="method_details ">
   <h3 class="signature " id="tempfile-class_method">
   
-    + (<tt>Object</tt>) <strong>tempfile</strong>(base) 
+    .<strong>tempfile</strong>(base)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1125,7 +1377,7 @@ production.</p>
       <div class="method_details ">
   <h3 class="signature " id="to_json-class_method">
   
-    + (<tt>Object</tt>) <strong>to_json</strong>(obj, opts = {}) 
+    .<strong>to_json</strong>(obj, opts = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1164,7 +1416,7 @@ production.</p>
       <div class="method_details ">
   <h3 class="signature " id="wrap-class_method">
   
-    + (<tt>Object</tt>) <strong>wrap</strong>(object) 
+    .<strong>wrap</strong>(object)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1186,18 +1438,18 @@ production.</p>
       <pre class="lines">
 
 
+178
+179
+180
 181
 182
 183
 184
 185
-186
-187
-188
-189</pre>
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 181</span>
+      <pre class="code"><span class="info file"># File 'common/asutils.rb', line 178</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_wrap identifier id'>wrap</span><span class='lparen token'>(</span><span class='rubyid_object identifier id'>object</span><span class='rparen token'>)</span>
   <span class='rubyid_if if kw'>if</span> <span class='rubyid_object identifier id'>object</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
@@ -1218,10 +1470,11 @@ production.</p>
 
 </div>
 
-    <div id="footer">
-  ArchivesSpace Version v1.4.0-rc8 Documentation Generated on Mon Sep 28 17:34:48 2015 by
+      <div id="footer">
+  ArchivesSpace Version v1.5.3.a Documentation Generated on Thu Mar 16 15:24:12 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-1.9.3).
+  0.9.0 (ruby-1.9.3).
 </div>
+    </div>
   </body>
 </html>

@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -130,7 +130,7 @@ matches.</p>
 
 <p>Here is a minimal example of an LDAP configuration:</p>
 
-<pre><code> AppConfig[:authentication_sources] = [{
+<div class="highlighter-rouge"><pre class="highlight"><code> AppConfig[:authentication_sources] = [{
                                          :model =&gt; 'LDAPAuth',
                                          :hostname =&gt; 'ldap.example.com',
                                          :port =&gt; 389,
@@ -139,15 +139,16 @@ matches.</p>
                                          :attribute_map =&gt; {:cn =&gt; :name},
  }]
 </code></pre>
+</div>
 
 <p>With this configuration, ArchivesSpace performs authentication by
-connecting to <code>ldap://ldap.example.com:389/</code>, binding anonymously,
-searching the <code>ou=people,dc=example,dc=com</code> tree for <code>uid = &lt;username&gt;</code>. </p>
+connecting to <code class="highlighter-rouge">ldap://ldap.example.com:389/</code>, binding anonymously,
+searching the <code class="highlighter-rouge">ou=people,dc=example,dc=com</code> tree for <code class="highlighter-rouge">uid = &lt;username&gt;</code>.</p>
 
 <p>If the user is found, ArchivesSpace authenticates them by
-binding using the password specified.  Finally, the <code>:attribute_map</code>
+binding using the password specified.  Finally, the <code class="highlighter-rouge">:attribute_map</code>
 entry specifies how LDAP attributes should be mapped to ArchivesSpace
-user attributes (mapping LDAP’s <code>cn</code> to ArchivesSpace’s <code>name</code> in the
+user attributes (mapping LDAP’s <code class="highlighter-rouge">cn</code> to ArchivesSpace’s <code class="highlighter-rouge">name</code> in the
 above example).</p>
 
 <p>Many LDAP directories don’t support anonymous binding.  To integrate
@@ -156,7 +157,7 @@ password of a user with permission to connect to the directory and
 search for other users.  Modifying the previous example for this case
 looks like this:</p>
 
-<pre><code> AppConfig[:authentication_sources] = [{
+<div class="highlighter-rouge"><pre class="highlight"><code> AppConfig[:authentication_sources] = [{
                                          :model =&gt; 'LDAPAuth',
                                          :hostname =&gt; 'ldap.example.com',
                                          :port =&gt; 389,
@@ -167,12 +168,13 @@ looks like this:</p>
                                          :bind_password =&gt; 'secretsquirrel',
  }]
 </code></pre>
+</div>
 
 <p>Finally, some LDAP directories enforce the use of SSL encryption.  To
 configure ArchivesSpace to connect via LDAPS, change the port as
-appropriate and specify the <code>encryption</code> option:</p>
+appropriate and specify the <code class="highlighter-rouge">encryption</code> option:</p>
 
-<pre><code> AppConfig[:authentication_sources] = [{
+<div class="highlighter-rouge"><pre class="highlight"><code> AppConfig[:authentication_sources] = [{
                                          :model =&gt; 'LDAPAuth',
                                          :hostname =&gt; 'ldap.example.com',
                                          :port =&gt; 636,
@@ -184,6 +186,7 @@ appropriate and specify the <code>encryption</code> option:</p>
                                          :encryption =&gt; :simple_tls,
  }]
 </code></pre>
+</div>
 
 
         </main>

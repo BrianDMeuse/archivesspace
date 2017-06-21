@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -122,28 +122,31 @@
           
             <h1 class="title">Running ArchivesSpace as a Unix daemon</h2>
           
-          <p>The <code>archivesspace.sh</code> startup script doubles as an init script.  If
+          <p>The <code class="highlighter-rouge">archivesspace.sh</code> startup script doubles as an init script.  If
 you run:</p>
 
-<pre><code> archivesspace.sh start
+<div class="highlighter-rouge"><pre class="highlight"><code> archivesspace.sh start
 </code></pre>
+</div>
 
 <p>ArchivesSpace will run in the background as a daemon (logging to
-<code>logs/archivesspace.out</code> by default, as before).  You can shut it down with:</p>
+<code class="highlighter-rouge">logs/archivesspace.out</code> by default, as before).  You can shut it down with:</p>
 
-<pre><code> archivesspace.sh stop
+<div class="highlighter-rouge"><pre class="highlight"><code> archivesspace.sh stop
 </code></pre>
+</div>
 
 <p>You can even install it as a system-wide init script by creating a
 symbolic link:</p>
 
-<pre><code> cd /etc/init.d
+<div class="highlighter-rouge"><pre class="highlight"><code> cd /etc/init.d
  ln -s /path/to/your/archivesspace/archivesspace.sh archivesspace
 </code></pre>
+</div>
 
 <p>Then use the appropriate tool for your distribution to set up the
-run-level symbolic links (such as <code>chkconfig</code> for RedHat or
-<code>update-rc.d</code> for Debian-based distributions).</p>
+run-level symbolic links (such as <code class="highlighter-rouge">chkconfig</code> for RedHat or
+<code class="highlighter-rouge">update-rc.d</code> for Debian-based distributions).</p>
 
 <p>Note that you may want to edit archivesspace.sh to set the account
 that the system runs under, JVM options, and so on.</p>

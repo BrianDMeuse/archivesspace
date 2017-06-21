@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -154,28 +154,28 @@ urls:</p>
 
 <ul>
   <li>
-    <p>Backend - <code>http://localhost:8089</code></p>
+    <p>Backend - <code class="highlighter-rouge">http://localhost:8089</code></p>
   </li>
   <li>
-    <p>Frontend (staff UI) - <code>http://localhost:8080</code></p>
+    <p>Frontend (staff UI) - <code class="highlighter-rouge">http://localhost:8080</code></p>
   </li>
   <li>
-    <p>Public (read-only UI) - <code>http://localhost:8081</code> </p>
+    <p>Public (read-only UI) - <code class="highlighter-rouge">http://localhost:8081</code></p>
   </li>
   <li>
-    <p>Solr (search middleware) - <code>http://localhost:8090</code></p>
+    <p>Solr (search middleware) - <code class="highlighter-rouge">http://localhost:8090</code></p>
   </li>
 </ul>
 
 <p>These assignments can be altered through edits to the configuration file
-located at <code>archivesspace/config/config.rb</code> in the standard distribution.</p>
+located at <code class="highlighter-rouge">archivesspace/config/config.rb</code> in the standard distribution.</p>
 
 <p>Since the four component applications must be able to communicate with each
-other over HTTP, the first step will be to restrict access to ports <code>8089</code>,
- <code>8080</code>, <code>8081</code>, and <code>8090</code> to the localhost. On a Linux server, this can be
+other over HTTP, the first step will be to restrict access to ports <code class="highlighter-rouge">8089</code>,
+ <code class="highlighter-rouge">8080</code>, <code class="highlighter-rouge">8081</code>, and <code class="highlighter-rouge">8090</code> to the localhost. On a Linux server, this can be
  done using iptables:</p>
 
-<pre><code> iptables -A INPUT -p tcp -s localhost --dport 8089 -j ACCEPT
+<div class="highlighter-rouge"><pre class="highlight"><code> iptables -A INPUT -p tcp -s localhost --dport 8089 -j ACCEPT
  iptables -A INPUT -p tcp --dport 8089 -j DROP
  iptables -A INPUT -p tcp -s localhost --dport 8080 -j ACCEPT
  iptables -A INPUT -p tcp --dport 8080 -j DROP
@@ -184,6 +184,7 @@ other over HTTP, the first step will be to restrict access to ports <code>8089</
  iptables -A INPUT -p tcp -s localhost --dport 8090 -j ACCEPT
  iptables -A INPUT -p tcp --dport 8090 -j DROP
 </code></pre>
+</div>
 
 <p>Once this is done, it should be possible to start up the application without
 exposing it to the outside world.</p>
@@ -192,47 +193,51 @@ exposing it to the outside world.</p>
 
 <p>In order for archivists and researchers to access the application, there will
 need to be two URLs that are exposed to the outside world, and per the main
-requirement of this exercise, those URLs will need to begin with <code>https://</code>.
+requirement of this exercise, those URLs will need to begin with <code class="highlighter-rouge">https://</code>.
 Let’s assume that they will be:</p>
 
 <ul>
   <li>
-    <p><code>https://staff.myarchive.org</code> - for archival staff</p>
+    <p><code class="highlighter-rouge">https://staff.myarchive.org</code> - for archival staff</p>
   </li>
   <li>
-    <p><code>https://research.myarchive.org</code> - for the public </p>
+    <p><code class="highlighter-rouge">https://research.myarchive.org</code> - for the public</p>
   </li>
 </ul>
 
 <p>Start by ensuring that Apache is configured to handle HTTPS requests. Locate
-the <code>httpd.conf</code> file and ensure that it contains this line (or similar):</p>
+the <code class="highlighter-rouge">httpd.conf</code> file and ensure that it contains this line (or similar):</p>
 
-<pre><code> LoadModule ssl_module modules/mod_ssl.so
+<div class="highlighter-rouge"><pre class="highlight"><code> LoadModule ssl_module modules/mod_ssl.so
 </code></pre>
+</div>
 
 <p>If it is commented out, uncomment it.</p>
 
 <p>Likewise, ensure that the Apache mod_proxy module is enabled:</p>
 
-<pre><code> LoadModule proxy_module modules/mod_proxy.so
+<div class="highlighter-rouge"><pre class="highlight"><code> LoadModule proxy_module modules/mod_proxy.so
 </code></pre>
+</div>
 
 <p>The following edits can be made in the httpd.conf file itself; however, it is
-conventional to use the <code>Include</code> directive to load them from a file
-named <code>ssl.conf</code>, <code>httpd-ssl.conf</code>, or the like. Example:</p>
+conventional to use the <code class="highlighter-rouge">Include</code> directive to load them from a file
+named <code class="highlighter-rouge">ssl.conf</code>, <code class="highlighter-rouge">httpd-ssl.conf</code>, or the like. Example:</p>
 
-<pre><code> Include "/path/to/apache/extra/ssl.conf"
+<div class="highlighter-rouge"><pre class="highlight"><code> Include "/path/to/apache/extra/ssl.conf"
 </code></pre>
+</div>
 
 <p>Make sure Apache is listening on port 443 (or whatever port you choose):</p>
 
-<pre><code> Listen 443
+<div class="highlighter-rouge"><pre class="highlight"><code> Listen 443
 </code></pre>
+</div>
 
-<p>Finally, use the <code>NameVirtualHost</code> and <code>VirtualHost</code> directives to proxy
+<p>Finally, use the <code class="highlighter-rouge">NameVirtualHost</code> and <code class="highlighter-rouge">VirtualHost</code> directives to proxy
 requests to the actual application urls. Example:</p>
 
-<pre><code> NameVirtualHost *:443
+<div class="highlighter-rouge"><pre class="highlight"><code> NameVirtualHost *:443
 
  &lt;VirtualHost *:443&gt;
    ServerName staff.myarchive.org
@@ -253,6 +258,7 @@ requests to the actual application urls. Example:</p>
    ProxyPassReverse / http://localhost:8081/
  &lt;/VirtualHost&gt;
 </code></pre>
+</div>
 
 <p>More information about configuring Apache for SSL can be found at
 http://httpd.apache.org/docs/current/ssl/ssl_howto.html.  You should read

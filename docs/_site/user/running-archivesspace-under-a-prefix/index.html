@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -128,21 +128,17 @@
 practive of running each user-facing ArchivesSpace application on its own subdomain, and instead
 serve each application under a prefix, e.g.</p>
 
-<pre><code>http://aspace.myarchive.org/staff
+<div class="highlighter-rouge"><pre class="highlight"><code>http://aspace.myarchive.org/staff
 http://aspace.myarchive.org/public
 </code></pre>
+</div>
 
 <p>This configuration described in this document is one possible approach,
 and to keep things simple the following are assumed:</p>
 
-<ul>
-  <li>
-    <p>ArchivesSpace is running on a single Linux server</p>
-  </li>
-  <li>
-    <p>The server is running the Apache 2.2+ webserver</p>
-  </li>
-</ul>
+<p>*ArchivesSpace is running on a single Linux server</p>
+
+<p>*The server is running the Apache 2.2+ webserver</p>
 
 <p>Unless otherwise stated, it is assumed that you have root access on
 your machines, and all commands are to be run as root (or with sudo).</p>
@@ -151,11 +147,12 @@ your machines, and all commands are to be run as root (or with sudo).</p>
 
 <p>The following edits can be made in the httpd.conf file itself, or in an included file:</p>
 
-<pre><code>ProxyPass /staff http://localhost:8080/
+<div class="highlighter-rouge"><pre class="highlight"><code>ProxyPass /staff http://localhost:8080/
 ProxyPassReverse /staff http://localhost:8080/
 ProxyPass /public http://localhost:8081/
 ProxyPassReverse /public http://localhost:8081/
 </code></pre>
+</div>
 
 <p>Now restart Apache.</p>
 
@@ -163,11 +160,12 @@ ProxyPassReverse /public http://localhost:8081/
 
 <p>Follow the instructions in the main README to download and install ArchiveSpace.</p>
 
-<p>Open the file <code>archivesspace/config/config.rb</code> and add the following lines:</p>
+<p>Open the file <code class="highlighter-rouge">archivesspace/config/config.rb</code> and add the following lines:</p>
 
-<pre><code>AppConfig[:frontend_proxy_url] = 'http://aspace.myarchive.org/staff'
+<div class="highlighter-rouge"><pre class="highlight"><code>AppConfig[:frontend_proxy_url] = 'http://aspace.myarchive.org/staff'
 AppConfig[:public_proxy_url] = 'http://aspace.myarchive.org/public'
 </code></pre>
+</div>
 
 <p>(Note: These lines should NOT begin with a ‘#’ character.)</p>
 
@@ -177,9 +175,10 @@ AppConfig[:public_proxy_url] = 'http://aspace.myarchive.org/public'
 
 <p>By default, the staff and public applications are accessible on ports 8080 and 8081</p>
 
-<pre><code>http://aspace.myarchive.org:8080
+<div class="highlighter-rouge"><pre class="highlight"><code>http://aspace.myarchive.org:8080
 http://aspace.myarchive.org:8081
 </code></pre>
+</div>
 
 <p>Since these are not the URLs at which users should access the application, you will probably
 want to close them off. See README_HTTPS for more information on closing ports using iptables.</p>

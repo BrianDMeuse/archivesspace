@@ -22,6 +22,8 @@ object	parent
 
 object	resource
 
+object	series
+
 integer	position
 
 array (JSONModel(:instance) object)	instances
@@ -29,6 +31,8 @@ array (JSONModel(:instance) object)	instances
 array ([{"type"=>"JSONModel(:note_bibliography) object"}, {"type"=>"JSONModel(:note_index) object"}, {"type"=>"JSONModel(:note_multipart) object"}, {"type"=>"JSONModel(:note_singlepart) object"}])	notes
 
 boolean	has_unpublished_ancestor
+
+JSONModel(:file_version) object	representative_image
 
 
 

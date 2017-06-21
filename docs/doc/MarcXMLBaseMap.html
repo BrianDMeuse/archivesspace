@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Module: MarcXMLBaseMap
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.0
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "MarcXMLBaseMap";
   relpath = '';
-  framesUrl = "frames.html#!MarcXMLBaseMap.html";
 </script>
 
 
@@ -28,80 +27,77 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index (M)</a> &raquo;
     
     
     <span class="title">MarcXMLBaseMap</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
-    </a>
-  
-    <a class="full_list_link" id="schema_list_link"
-        href="schema_list.html">
-      Schema List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="class_list.html"></iframe>
 
-    <div id="content"><h1>Module: MarcXMLBaseMap
+      <div id="content"><h1>Module: MarcXMLBaseMap
   
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
   
   
-    
-  
-    
   
   
-    <dt class="r1">Included in:</dt>
-    <dd class="r1"><span class='object_link'><a href="MarcXMLConverter.html" title="MarcXMLConverter (class)">MarcXMLConverter</a></span></dd>
-    
   
+
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">backend/app/converters/lib/marcxml_base_map.rb</dd>
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="MarcXMLConverter.html" title="MarcXMLConverter (class)">MarcXMLConverter</a></span></dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>backend/app/converters/lib/marcxml_base_map.rb</dd>
+  </dl>
+  
+</div>
 
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="AUTH_SUBJECT_SOURCE-constant" class="">AUTH_SUBJECT_SOURCE =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace token'>{</span>
+  <dl class="constants">
+    
+      <dt id="AUTH_SUBJECT_SOURCE-constant" class="">AUTH_SUBJECT_SOURCE =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace token'>{</span>
   <span class='string val'>'a'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Library of Congress Subject Headings&quot;</span><span class='comma token'>,</span>
   <span class='string val'>'b'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;LC subject headings for children's literature&quot;</span><span class='comma token'>,</span>
   <span class='string val'>'c'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Medical Subject Headings&quot;</span><span class='comma token'>,</span>
@@ -114,11 +110,11 @@
   <span class='string val'>'z'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Other&quot;</span>
 <span class='rbrace token'>}</span>
 </pre></dd>
-      
-        <dt id="BIB_SUBJECT_SOURCE-constant" class="">BIB_SUBJECT_SOURCE =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace token'>{</span>
+    
+      <dt id="BIB_SUBJECT_SOURCE-constant" class="">BIB_SUBJECT_SOURCE =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace token'>{</span>
   <span class='string val'>'0'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Library of Congress Subject Headings&quot;</span><span class='comma token'>,</span>
   <span class='string val'>'1'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;LC subject headings for children's literature&quot;</span><span class='comma token'>,</span>
   <span class='string val'>'2'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Medical Subject Headings&quot;</span><span class='comma token'>,</span>
@@ -128,9 +124,8 @@
   <span class='string val'>'6'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;R\u00E9pertoire de vedettes-matic\u00E8re&quot;</span>
 <span class='rbrace token'>}</span>
 </pre></dd>
-      
-    </dl>
-  
+    
+  </dl>
 
 
 
@@ -141,7 +136,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -149,7 +144,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#adds_agent_term-instance_method" title="#adds_agent_term (instance method)">- (Object) <strong>adds_agent_term</strong>(term_type, prefix = &quot;&quot;) </a>
+      <a href="#adds_agent_term-instance_method" title="#adds_agent_term (instance method)">#<strong>adds_agent_term</strong>(term_type, prefix = &quot;&quot;)  &#x21d2; Object </a>
     
 
     
@@ -172,7 +167,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#adds_prefixed_qualifier-instance_method" title="#adds_prefixed_qualifier (instance method)">- (Object) <strong>adds_prefixed_qualifier</strong>(prefix, separator = ': ') </a>
+      <a href="#adds_prefixed_qualifier-instance_method" title="#adds_prefixed_qualifier (instance method)">#<strong>adds_prefixed_qualifier</strong>(prefix, separator = ': ')  &#x21d2; Object </a>
     
 
     
@@ -195,7 +190,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#agent_as_subject-instance_method" title="#agent_as_subject (instance method)">- (Object) <strong>agent_as_subject</strong> </a>
+      <a href="#agent_as_subject-instance_method" title="#agent_as_subject (instance method)">#<strong>agent_as_subject</strong>  &#x21d2; Object </a>
     
 
     
@@ -218,7 +213,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#agent_template-instance_method" title="#agent_template (instance method)">- (Object) <strong>agent_template</strong> </a>
+      <a href="#agent_template-instance_method" title="#agent_template (instance method)">#<strong>agent_template</strong>  &#x21d2; Object </a>
     
 
     
@@ -241,7 +236,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#appends_subordinate_name_2-instance_method" title="#appends_subordinate_name_2 (instance method)">- (Object) <strong>appends_subordinate_name_2</strong> </a>
+      <a href="#appends_subordinate_name_2-instance_method" title="#appends_subordinate_name_2 (instance method)">#<strong>appends_subordinate_name_2</strong>  &#x21d2; Object </a>
     
 
     
@@ -264,7 +259,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#BASE_RECORD_MAP-instance_method" title="#BASE_RECORD_MAP (instance method)">- (Object) <strong>BASE_RECORD_MAP</strong> </a>
+      <a href="#BASE_RECORD_MAP-instance_method" title="#BASE_RECORD_MAP (instance method)">#<strong>BASE_RECORD_MAP</strong>  &#x21d2; Object </a>
     
 
     
@@ -287,7 +282,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#bibliography_note_template-instance_method" title="#bibliography_note_template (instance method)">- (Object) <strong>bibliography_note_template</strong>(label, template = nil, *tmpl_args) </a>
+      <a href="#bibliography_note_template-instance_method" title="#bibliography_note_template (instance method)">#<strong>bibliography_note_template</strong>(label, template = nil, *tmpl_args)  &#x21d2; Object </a>
     
 
     
@@ -310,7 +305,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#concatenate_subfields-instance_method" title="#concatenate_subfields (instance method)">- (Object) <strong>concatenate_subfields</strong>(codearray, node, delim = ' ') </a>
+      <a href="#concatenate_subfields-instance_method" title="#concatenate_subfields (instance method)">#<strong>concatenate_subfields</strong>(codearray, node, delim = ' ')  &#x21d2; Object </a>
     
 
     
@@ -333,7 +328,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#corp_template-instance_method" title="#corp_template (instance method)">- (Object) <strong>corp_template</strong> </a>
+      <a href="#corp_template-instance_method" title="#corp_template (instance method)">#<strong>corp_template</strong>  &#x21d2; Object </a>
     
 
     
@@ -356,7 +351,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#corp_variation-instance_method" title="#corp_variation (instance method)">- (Object) <strong>corp_variation</strong> </a>
+      <a href="#corp_variation-instance_method" title="#corp_variation (instance method)">#<strong>corp_variation</strong>  &#x21d2; Object </a>
     
 
     
@@ -379,7 +374,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#creators_and_sources-instance_method" title="#creators_and_sources (instance method)">- (Object) <strong>creators_and_sources</strong> </a>
+      <a href="#creators_and_sources-instance_method" title="#creators_and_sources (instance method)">#<strong>creators_and_sources</strong>  &#x21d2; Object </a>
     
 
     
@@ -402,7 +397,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#family_template-instance_method" title="#family_template (instance method)">- (Object) <strong>family_template</strong> </a>
+      <a href="#family_template-instance_method" title="#family_template (instance method)">#<strong>family_template</strong>  &#x21d2; Object </a>
     
 
     
@@ -425,7 +420,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#is_fallback_resource_title-instance_method" title="#is_fallback_resource_title (instance method)">- (Object) <strong>is_fallback_resource_title</strong> </a>
+      <a href="#is_fallback_resource_title-instance_method" title="#is_fallback_resource_title (instance method)">#<strong>is_fallback_resource_title</strong>  &#x21d2; Object </a>
     
 
     
@@ -448,7 +443,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#make_term-instance_method" title="#make_term (instance method)">- (Object) <strong>make_term</strong>(term_type, term) </a>
+      <a href="#make_term-instance_method" title="#make_term (instance method)">#<strong>make_term</strong>(term_type, term)  &#x21d2; Object </a>
     
 
     
@@ -471,7 +466,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#multipart_note-instance_method" title="#multipart_note (instance method)">- (Object) <strong>multipart_note</strong>(note_type, label = nil, template = nil, *tmpl_args) </a>
+      <a href="#multipart_note-instance_method" title="#multipart_note (instance method)">#<strong>multipart_note</strong>(note_type, label = nil, template = nil, *tmpl_args)  &#x21d2; Object </a>
     
 
     
@@ -494,7 +489,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name_corp_map-instance_method" title="#name_corp_map (instance method)">- (Object) <strong>name_corp_map</strong> </a>
+      <a href="#name_corp_map-instance_method" title="#name_corp_map (instance method)">#<strong>name_corp_map</strong>  &#x21d2; Object </a>
     
 
     
@@ -517,7 +512,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name_family_map-instance_method" title="#name_family_map (instance method)">- (Object) <strong>name_family_map</strong> </a>
+      <a href="#name_family_map-instance_method" title="#name_family_map (instance method)">#<strong>name_family_map</strong>  &#x21d2; Object </a>
     
 
     
@@ -540,7 +535,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name_person_map-instance_method" title="#name_person_map (instance method)">- (Object) <strong>name_person_map</strong> </a>
+      <a href="#name_person_map-instance_method" title="#name_person_map (instance method)">#<strong>name_person_map</strong>  &#x21d2; Object </a>
     
 
     
@@ -563,7 +558,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#person_template-instance_method" title="#person_template (instance method)">- (Object) <strong>person_template</strong> </a>
+      <a href="#person_template-instance_method" title="#person_template (instance method)">#<strong>person_template</strong>  &#x21d2; Object </a>
     
 
     
@@ -586,7 +581,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#record_type-instance_method" title="#record_type (instance method)">- (Object) <strong>record_type</strong>(type_of_record = nil, subject_source = nil) </a>
+      <a href="#record_type-instance_method" title="#record_type (instance method)">#<strong>record_type</strong>(type_of_record = nil, subject_source = nil)  &#x21d2; Object </a>
     
 
     
@@ -611,7 +606,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sets_name_order_from_ind1-instance_method" title="#sets_name_order_from_ind1 (instance method)">- (Object) <strong>sets_name_order_from_ind1</strong> </a>
+      <a href="#sets_name_order_from_ind1-instance_method" title="#sets_name_order_from_ind1 (instance method)">#<strong>sets_name_order_from_ind1</strong>  &#x21d2; Object </a>
     
 
     
@@ -634,7 +629,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sets_name_source_from_code-instance_method" title="#sets_name_source_from_code (instance method)">- (Object) <strong>sets_name_source_from_code</strong> </a>
+      <a href="#sets_name_source_from_code-instance_method" title="#sets_name_source_from_code (instance method)">#<strong>sets_name_source_from_code</strong>  &#x21d2; Object </a>
     
 
     
@@ -657,7 +652,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sets_other_name_source-instance_method" title="#sets_other_name_source (instance method)">- (Object) <strong>sets_other_name_source</strong> </a>
+      <a href="#sets_other_name_source-instance_method" title="#sets_other_name_source (instance method)">#<strong>sets_other_name_source</strong>  &#x21d2; Object </a>
     
 
     
@@ -680,7 +675,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sets_primary_and_rest_of_name-instance_method" title="#sets_primary_and_rest_of_name (instance method)">- (Object) <strong>sets_primary_and_rest_of_name</strong> </a>
+      <a href="#sets_primary_and_rest_of_name-instance_method" title="#sets_primary_and_rest_of_name (instance method)">#<strong>sets_primary_and_rest_of_name</strong>  &#x21d2; Object </a>
     
 
     
@@ -703,7 +698,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sets_subject_source-instance_method" title="#sets_subject_source (instance method)">- (Object) <strong>sets_subject_source</strong> </a>
+      <a href="#sets_subject_source-instance_method" title="#sets_subject_source (instance method)">#<strong>sets_subject_source</strong>  &#x21d2; Object </a>
     
 
     
@@ -726,7 +721,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sets_use_date_from_code_d-instance_method" title="#sets_use_date_from_code_d (instance method)">- (Object) <strong>sets_use_date_from_code_d</strong> </a>
+      <a href="#sets_use_date_from_code_d-instance_method" title="#sets_use_date_from_code_d (instance method)">#<strong>sets_use_date_from_code_d</strong>  &#x21d2; Object </a>
     
 
     
@@ -749,7 +744,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#singlepart_note-instance_method" title="#singlepart_note (instance method)">- (Object) <strong>singlepart_note</strong>(note_type, label, template = nil, *tmpl_args) </a>
+      <a href="#singlepart_note-instance_method" title="#singlepart_note (instance method)">#<strong>singlepart_note</strong>(note_type, label, template = nil, *tmpl_args)  &#x21d2; Object </a>
     
 
     
@@ -772,7 +767,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#subfield_template-instance_method" title="#subfield_template (instance method)">- (Object) <strong>subfield_template</strong>(template, node, map = nil) </a>
+      <a href="#subfield_template-instance_method" title="#subfield_template (instance method)">#<strong>subfield_template</strong>(template, node, map = nil)  &#x21d2; Object </a>
     
 
     
@@ -795,7 +790,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#subject_template-instance_method" title="#subject_template (instance method)">- (Object) <strong>subject_template</strong>(getterms, getsrc) </a>
+      <a href="#subject_template-instance_method" title="#subject_template (instance method)">#<strong>subject_template</strong>(getterms, getsrc)  &#x21d2; Object </a>
     
 
     
@@ -827,7 +822,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="adds_agent_term-instance_method">
   
-    - (<tt>Object</tt>) <strong>adds_agent_term</strong>(term_type, prefix = &quot;&quot;) 
+    #<strong>adds_agent_term</strong>(term_type, prefix = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -839,20 +834,20 @@
       <pre class="lines">
 
 
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402</pre>
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 392</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 373</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_adds_agent_term identifier id'>adds_agent_term</span><span class='lparen token'>(</span><span class='rubyid_term_type identifier id'>term_type</span><span class='comma token'>,</span> <span class='rubyid_prefix identifier id'>prefix</span> <span class='assign token'>=</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_agent identifier id'>agent</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -874,7 +869,7 @@
       <div class="method_details ">
   <h3 class="signature " id="adds_prefixed_qualifier-instance_method">
   
-    - (<tt>Object</tt>) <strong>adds_prefixed_qualifier</strong>(prefix, separator = ': ') 
+    #<strong>adds_prefixed_qualifier</strong>(prefix, separator = ': ')  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -886,19 +881,19 @@
       <pre class="lines">
 
 
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477</pre>
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 468</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 449</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_adds_prefixed_qualifier identifier id'>adds_prefixed_qualifier</span><span class='lparen token'>(</span><span class='rubyid_prefix identifier id'>prefix</span><span class='comma token'>,</span> <span class='rubyid_separator identifier id'>separator</span> <span class='assign token'>=</span> <span class='string val'>': '</span><span class='rparen token'>)</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -919,7 +914,7 @@
       <div class="method_details ">
   <h3 class="signature " id="agent_as_subject-instance_method">
   
-    - (<tt>Object</tt>) <strong>agent_as_subject</strong> 
+    #<strong>agent_as_subject</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -941,26 +936,26 @@
       <pre class="lines">
 
 
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323</pre>
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 307</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 288</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_agent_as_subject identifier id'>agent_as_subject</span>
   <span class='lbrace token'>{</span>
@@ -988,7 +983,7 @@
       <div class="method_details ">
   <h3 class="signature " id="agent_template-instance_method">
   
-    - (<tt>Object</tt>) <strong>agent_template</strong> 
+    #<strong>agent_template</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1026,9 +1021,7 @@
 96
 97
 98
-99
-100
-101</pre>
+99</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 73</span>
@@ -1055,8 +1048,6 @@
         <span class='symbol val'>:defaults</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
           <span class='symbol val'>:name_order</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'direct'</span><span class='comma token'>,</span>
           <span class='symbol val'>:source</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'ingest'</span>
-        
-        
         <span class='rbrace token'>}</span>
       <span class='rbrace token'>}</span>
     <span class='rbrace token'>}</span>
@@ -1071,7 +1062,7 @@
       <div class="method_details ">
   <h3 class="signature " id="appends_subordinate_name_2-instance_method">
   
-    - (<tt>Object</tt>) <strong>appends_subordinate_name_2</strong> 
+    #<strong>appends_subordinate_name_2</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1083,16 +1074,16 @@
       <pre class="lines">
 
 
-480
-481
-482
-483
-484
-485
-486</pre>
+461
+462
+463
+464
+465
+466
+467</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 480</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 461</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_appends_subordinate_name_2 identifier id'>appends_subordinate_name_2</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -1110,7 +1101,7 @@
       <div class="method_details ">
   <h3 class="signature " id="BASE_RECORD_MAP-instance_method">
   
-    - (<tt>Object</tt>) <strong>BASE_RECORD_MAP</strong> 
+    #<strong>BASE_RECORD_MAP</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1136,6 +1127,25 @@ the extending class.</p>
       <pre class="lines">
 
 
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
 568
 569
 570
@@ -1757,29 +1767,10 @@ the extending class.</p>
 1186
 1187
 1188
-1189
-1190
-1191
-1192
-1193
-1194
-1195
-1196
-1197
-1198
-1199
-1200
-1201
-1202
-1203
-1204
-1205
-1206
-1207
-1208</pre>
+1189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 568</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 549</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_BASE_RECORD_MAP constant id'>BASE_RECORD_MAP</span>
   <span class='lbrace token'>{</span>
@@ -2431,7 +2422,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="bibliography_note_template-instance_method">
   
-    - (<tt>Object</tt>) <strong>bibliography_note_template</strong>(label, template = nil, *tmpl_args) 
+    #<strong>bibliography_note_template</strong>(label, template = nil, *tmpl_args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2443,22 +2434,22 @@ the extending class.</p>
       <pre class="lines">
 
 
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354</pre>
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 342</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 323</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_bibliography_note_template identifier id'>bibliography_note_template</span><span class='lparen token'>(</span><span class='rubyid_label identifier id'>label</span><span class='comma token'>,</span> <span class='rubyid_template identifier id'>template</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='rubyid_tmpl_args identifier id'>tmpl_args</span><span class='rparen token'>)</span>
   <span class='lbrace token'>{</span>
@@ -2482,7 +2473,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="concatenate_subfields-instance_method">
   
-    - (<tt>Object</tt>) <strong>concatenate_subfields</strong>(codearray, node, delim = ' ') 
+    #<strong>concatenate_subfields</strong>(codearray, node, delim = ' ')  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2504,21 +2495,21 @@ the extending class.</p>
       <pre class="lines">
 
 
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548</pre>
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 537</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 518</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_concatenate_subfields identifier id'>concatenate_subfields</span><span class='lparen token'>(</span><span class='rubyid_codearray identifier id'>codearray</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span><span class='comma token'>,</span> <span class='rubyid_delim identifier id'>delim</span><span class='assign token'>=</span><span class='string val'>' '</span><span class='rparen token'>)</span>
   <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='string val'>&quot;&quot;</span>
@@ -2541,7 +2532,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="corp_template-instance_method">
   
-    - (<tt>Object</tt>) <strong>corp_template</strong> 
+    #<strong>corp_template</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2553,6 +2544,8 @@ the extending class.</p>
       <pre class="lines">
 
 
+217
+218
 219
 220
 221
@@ -2581,30 +2574,10 @@ the extending class.</p>
 244
 245
 246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267</pre>
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 219</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 217</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_corp_template identifier id'>corp_template</span>
   <span class='rubyid_mix identifier id'>mix</span><span class='lparen token'>(</span><span class='rubyid_agent_template identifier id'>agent_template</span><span class='comma token'>,</span> <span class='lbrace token'>{</span>
@@ -2633,24 +2606,6 @@ the extending class.</p>
           <span class='symbol val'>:name_order</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'direct'</span><span class='comma token'>,</span>
           <span class='symbol val'>:source</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'ingest'</span>
         <span class='rbrace token'>}</span>
-      <span class='rbrace token'>}</span><span class='comma token'>,</span>
-      <span class='string val'>&quot;//datafield[@tag='610']&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
-        <span class='symbol val'>:obj</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:name_corporate_entity</span><span class='comma token'>,</span>
-        <span class='symbol val'>:rel</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:names</span><span class='comma token'>,</span>
-        <span class='symbol val'>:map</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_name_corp_map identifier id'>name_corp_map</span><span class='comma token'>,</span>
-        <span class='symbol val'>:defaults</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
-          <span class='symbol val'>:name_order</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'direct'</span><span class='comma token'>,</span>
-          <span class='symbol val'>:source</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'ingest'</span>
-        <span class='rbrace token'>}</span>
-      <span class='rbrace token'>}</span><span class='comma token'>,</span>
-      <span class='string val'>&quot;//datafield[@tag='611']&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
-        <span class='symbol val'>:obj</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:name_corporate_entity</span><span class='comma token'>,</span>
-        <span class='symbol val'>:rel</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:names</span><span class='comma token'>,</span>
-        <span class='symbol val'>:map</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_name_corp_map identifier id'>name_corp_map</span><span class='comma token'>,</span>
-        <span class='symbol val'>:defaults</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
-          <span class='symbol val'>:name_order</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'direct'</span><span class='comma token'>,</span>
-          <span class='symbol val'>:source</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'ingest'</span>
-        <span class='rbrace token'>}</span>
       <span class='rbrace token'>}</span>
     <span class='rbrace token'>}</span>
   <span class='rbrace token'>}</span><span class='rparen token'>)</span>
@@ -2664,7 +2619,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="corp_variation-instance_method">
   
-    - (<tt>Object</tt>) <strong>corp_variation</strong> 
+    #<strong>corp_variation</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2676,23 +2631,23 @@ the extending class.</p>
       <pre class="lines">
 
 
-326
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339</pre>
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 326</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 307</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_corp_variation identifier id'>corp_variation</span>
   <span class='lbrace token'>{</span>
@@ -2717,7 +2672,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="creators_and_sources-instance_method">
   
-    - (<tt>Object</tt>) <strong>creators_and_sources</strong> 
+    #<strong>creators_and_sources</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2739,6 +2694,26 @@ the extending class.</p>
       <pre class="lines">
 
 
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
 271
 272
 273
@@ -2753,29 +2728,10 @@ the extending class.</p>
 282
 283
 284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304</pre>
+285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 271</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 251</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_creators_and_sources identifier id'>creators_and_sources</span>
   <span class='lbrace token'>{</span>
@@ -2798,6 +2754,7 @@ the extending class.</p>
       <span class='rbrace token'>}</span><span class='comma token'>,</span>
       <span class='string val'>&quot;self::datafield&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
         <span class='symbol val'>:map</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span>
+          <span class='string val'>&quot;//controlfield[@tag='001']&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:authority_id</span><span class='comma token'>,</span> 
           <span class='string val'>&quot;@ind1&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_sets_name_order_from_ind1 identifier id'>sets_name_order_from_ind1</span><span class='comma token'>,</span>
           <span class='string val'>&quot;subfield[@code='v']&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_adds_prefixed_qualifier identifier id'>adds_prefixed_qualifier</span><span class='lparen token'>(</span><span class='string val'>'Form subdivision'</span><span class='rparen token'>)</span><span class='comma token'>,</span>
           <span class='string val'>&quot;subfield[@code='x']&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_adds_prefixed_qualifier identifier id'>adds_prefixed_qualifier</span><span class='lparen token'>(</span><span class='string val'>'General subdivision'</span><span class='rparen token'>)</span><span class='comma token'>,</span>
@@ -2820,7 +2777,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="family_template-instance_method">
   
-    - (<tt>Object</tt>) <strong>family_template</strong> 
+    #<strong>family_template</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2832,6 +2789,8 @@ the extending class.</p>
       <pre class="lines">
 
 
+168
+169
 170
 171
 172
@@ -2851,12 +2810,10 @@ the extending class.</p>
 186
 187
 188
-189
-190
-191</pre>
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 170</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 168</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_family_template identifier id'>family_template</span>
   <span class='rubyid_mix identifier id'>mix</span><span class='lparen token'>(</span><span class='rubyid_agent_template identifier id'>agent_template</span><span class='comma token'>,</span> <span class='lbrace token'>{</span>
@@ -2889,7 +2846,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="is_fallback_resource_title-instance_method">
   
-    - (<tt>Object</tt>) <strong>is_fallback_resource_title</strong> 
+    #<strong>is_fallback_resource_title</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2901,19 +2858,19 @@ the extending class.</p>
       <pre class="lines">
 
 
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560</pre>
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 551</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 532</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_is_fallback_resource_title identifier id'>is_fallback_resource_title</span>
   <span class='lbrace token'>{</span>
@@ -2934,7 +2891,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="make_term-instance_method">
   
-    - (<tt>Object</tt>) <strong>make_term</strong>(term_type, term) 
+    #<strong>make_term</strong>(term_type, term)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2969,7 +2926,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="multipart_note-instance_method">
   
-    - (<tt>Object</tt>) <strong>multipart_note</strong>(note_type, label = nil, template = nil, *tmpl_args) 
+    #<strong>multipart_note</strong>(note_type, label = nil, template = nil, *tmpl_args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2981,26 +2938,26 @@ the extending class.</p>
       <pre class="lines">
 
 
-373
-374
-375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389</pre>
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 373</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 354</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_multipart_note identifier id'>multipart_note</span><span class='lparen token'>(</span><span class='rubyid_note_type identifier id'>note_type</span><span class='comma token'>,</span> <span class='rubyid_label identifier id'>label</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_template identifier id'>template</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='rubyid_tmpl_args identifier id'>tmpl_args</span><span class='rparen token'>)</span>
   <span class='lbrace token'>{</span>
@@ -3028,7 +2985,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="name_corp_map-instance_method">
   
-    - (<tt>Object</tt>) <strong>name_corp_map</strong> 
+    #<strong>name_corp_map</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3040,6 +2997,8 @@ the extending class.</p>
       <pre class="lines">
 
 
+192
+193
 194
 195
 196
@@ -3060,12 +3019,10 @@ the extending class.</p>
 211
 212
 213
-214
-215
-216</pre>
+214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 192</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_name_corp_map identifier id'>name_corp_map</span>
   <span class='lbrace token'>{</span>
@@ -3099,7 +3056,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="name_family_map-instance_method">
   
-    - (<tt>Object</tt>) <strong>name_family_map</strong> 
+    #<strong>name_family_map</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3111,6 +3068,8 @@ the extending class.</p>
       <pre class="lines">
 
 
+152
+153
 154
 155
 156
@@ -3122,12 +3081,10 @@ the extending class.</p>
 162
 163
 164
-165
-166
-167</pre>
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 152</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_name_family_map identifier id'>name_family_map</span>
   <span class='lbrace token'>{</span>
@@ -3152,7 +3109,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="name_person_map-instance_method">
   
-    - (<tt>Object</tt>) <strong>name_person_map</strong> 
+    #<strong>name_person_map</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3164,6 +3121,8 @@ the extending class.</p>
       <pre class="lines">
 
 
+102
+103
 104
 105
 106
@@ -3185,12 +3144,10 @@ the extending class.</p>
 122
 123
 124
-125
-126
-127</pre>
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 102</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_name_person_map identifier id'>name_person_map</span>
   <span class='lbrace token'>{</span>
@@ -3225,7 +3182,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="person_template-instance_method">
   
-    - (<tt>Object</tt>) <strong>person_template</strong> 
+    #<strong>person_template</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3237,6 +3194,8 @@ the extending class.</p>
       <pre class="lines">
 
 
+128
+129
 130
 131
 132
@@ -3256,12 +3215,10 @@ the extending class.</p>
 146
 147
 148
-149
-150
-151</pre>
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 128</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_person_template identifier id'>person_template</span>
   <span class='rubyid_mix identifier id'>mix</span><span class='lparen token'>(</span><span class='rubyid_agent_template identifier id'>agent_template</span><span class='comma token'>,</span> <span class='lbrace token'>{</span>
@@ -3294,7 +3251,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="record_type-instance_method">
   
-    - (<tt>Object</tt>) <strong>record_type</strong>(type_of_record = nil, subject_source = nil) 
+    #<strong>record_type</strong>(type_of_record = nil, subject_source = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3343,7 +3300,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="sets_name_order_from_ind1-instance_method">
   
-    - (<tt>Object</tt>) <strong>sets_name_order_from_ind1</strong> 
+    #<strong>sets_name_order_from_ind1</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3355,19 +3312,19 @@ the extending class.</p>
       <pre class="lines">
 
 
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427</pre>
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 418</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 399</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_sets_name_order_from_ind1 identifier id'>sets_name_order_from_ind1</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -3388,7 +3345,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="sets_name_source_from_code-instance_method">
   
-    - (<tt>Object</tt>) <strong>sets_name_source_from_code</strong> 
+    #<strong>sets_name_source_from_code</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3400,15 +3357,15 @@ the extending class.</p>
       <pre class="lines">
 
 
-430
-431
-432
-433
-434
-435</pre>
+411
+412
+413
+414
+415
+416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 430</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 411</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_sets_name_source_from_code identifier id'>sets_name_source_from_code</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -3425,7 +3382,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="sets_other_name_source-instance_method">
   
-    - (<tt>Object</tt>) <strong>sets_other_name_source</strong> 
+    #<strong>sets_other_name_source</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3437,14 +3394,14 @@ the extending class.</p>
       <pre class="lines">
 
 
-438
-439
-440
-441
-442</pre>
+419
+420
+421
+422
+423</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 438</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 419</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_sets_other_name_source identifier id'>sets_other_name_source</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -3460,7 +3417,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="sets_primary_and_rest_of_name-instance_method">
   
-    - (<tt>Object</tt>) <strong>sets_primary_and_rest_of_name</strong> 
+    #<strong>sets_primary_and_rest_of_name</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3472,20 +3429,20 @@ the extending class.</p>
       <pre class="lines">
 
 
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415</pre>
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 405</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 386</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_sets_primary_and_rest_of_name identifier id'>sets_primary_and_rest_of_name</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -3507,7 +3464,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="sets_subject_source-instance_method">
   
-    - (<tt>Object</tt>) <strong>sets_subject_source</strong> 
+    #<strong>sets_subject_source</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3550,7 +3507,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="sets_use_date_from_code_d-instance_method">
   
-    - (<tt>Object</tt>) <strong>sets_use_date_from_code_d</strong> 
+    #<strong>sets_use_date_from_code_d</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3562,30 +3519,30 @@ the extending class.</p>
       <pre class="lines">
 
 
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
 445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465</pre>
+446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 445</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 426</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_sets_use_date_from_code_d identifier id'>sets_use_date_from_code_d</span>
   <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span> <span class='lbrace token'>{</span>
@@ -3617,7 +3574,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="singlepart_note-instance_method">
   
-    - (<tt>Object</tt>) <strong>singlepart_note</strong>(note_type, label, template = nil, *tmpl_args) 
+    #<strong>singlepart_note</strong>(note_type, label, template = nil, *tmpl_args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3629,23 +3586,23 @@ the extending class.</p>
       <pre class="lines">
 
 
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370</pre>
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 357</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 338</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_singlepart_note identifier id'>singlepart_note</span><span class='lparen token'>(</span><span class='rubyid_note_type identifier id'>note_type</span><span class='comma token'>,</span> <span class='rubyid_label identifier id'>label</span><span class='comma token'>,</span> <span class='rubyid_template identifier id'>template</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='rubyid_tmpl_args identifier id'>tmpl_args</span><span class='rparen token'>)</span>
   <span class='lbrace token'>{</span>
@@ -3670,7 +3627,7 @@ the extending class.</p>
       <div class="method_details ">
   <h3 class="signature " id="subfield_template-instance_method">
   
-    - (<tt>Object</tt>) <strong>subfield_template</strong>(template, node, map = nil) 
+    #<strong>subfield_template</strong>(template, node, map = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3696,6 +3653,25 @@ the end attempts to keep the punctuation normal.</p>
       <pre class="lines">
 
 
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
 493
 494
 495
@@ -3718,29 +3694,10 @@ the end attempts to keep the punctuation normal.</p>
 512
 513
 514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534</pre>
+515</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 493</span>
+      <pre class="code"><span class="info file"># File 'backend/app/converters/lib/marcxml_base_map.rb', line 474</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_subfield_template identifier id'>subfield_template</span><span class='lparen token'>(</span><span class='rubyid_template identifier id'>template</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span><span class='comma token'>,</span> <span class='rubyid_map identifier id'>map</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
   <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='rubyid_template identifier id'>template</span><span class='dot token'>.</span><span class='rubyid_clone identifier id'>clone</span>
@@ -3793,7 +3750,7 @@ the end attempts to keep the punctuation normal.</p>
       <div class="method_details ">
   <h3 class="signature " id="subject_template-instance_method">
   
-    - (<tt>Object</tt>) <strong>subject_template</strong>(getterms, getsrc) 
+    #<strong>subject_template</strong>(getterms, getsrc)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3845,10 +3802,11 @@ the end attempts to keep the punctuation normal.</p>
 
 </div>
 
-    <div id="footer">
-  ArchivesSpace Version v1.4.0-rc8 Documentation Generated on Mon Sep 28 17:34:47 2015 by
+      <div id="footer">
+  ArchivesSpace Version v1.5.3.a Documentation Generated on Thu Mar 16 15:24:10 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-1.9.3).
+  0.9.0 (ruby-1.9.3).
 </div>
+    </div>
   </body>
 </html>

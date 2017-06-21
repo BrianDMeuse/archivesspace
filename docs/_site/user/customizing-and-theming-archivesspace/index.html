@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -131,37 +131,39 @@
 <p>You can see the source files for both the 
 [ Staff Frontend Application] (https://github.com/archivesspace/archivesspace/tree/master/frontend/config/locales) and
 <a href="https://github.com/archivesspace/archivesspace/tree/master/public/config/locales">Public Application</a>
-There is also a <a href="https://github.com/archivesspace/archivesspace/blob/master/common/locales/en.yml">common locale file</a> for some values used throughout the ArchivesSpace applications. </p>
+There is also a <a href="https://github.com/archivesspace/archivesspace/blob/master/common/locales/en.yml">common locale file</a> for some values used throughout the ArchivesSpace applications.</p>
 
-<p>These values are pulled into the views using the I18n.t() methoded, like  I18n.t(“brand.welcome_message”). </p>
+<p>These values are pulled into the views using the I18n.t() methoded, like  I18n.t(“brand.welcome_message”).</p>
 
-<p>If the value you want to override is in the common locale file (like the “digital object title” field label, for example) , you can change this by simply editing the locales/en.yml file in your ArchivesSpace distribution home directory. A restart is required to have the changes take effect.  </p>
+<p>If the value you want to override is in the common locale file (like the “digital object title” field label, for example) , you can change this by simply editing the locales/en.yml file in your ArchivesSpace distribution home directory. A restart is required to have the changes take effect.</p>
 
-<p>If the value you want to change is in either the public or staff specific en.yml files,  you can override these values using the plugins directory. For example, if you want to change the welcome message on the public frontend, make a file in your ArchivesSpace distribution called ‘plugins/local/public/locales/en.yml’ and put the following values: </p>
+<p>If the value you want to change is in either the public or staff specific en.yml files,  you can override these values using the plugins directory. For example, if you want to change the welcome message on the public frontend, make a file in your ArchivesSpace distribution called ‘plugins/local/public/locales/en.yml’ and put the following values:</p>
 
-<pre><code>en:
+<div class="highlighter-rouge"><pre class="highlight"><code>en:
 	brand:
 	title: My Archive 
 	home: Home
  		welcome_message: HEY HEY HEY!! 
 </code></pre>
+</div>
 
 <p>If you restart ArchivesSpace, these values will take effect.</p>
 
-<p>If you’re using a different language, simply swap out the en.yml for something else ( like fr.yml ) and update locale setting in the config.rb file ( i.e.,  AppConfig[:locale] = :fr ) </p>
+<p>If you’re using a different language, simply swap out the en.yml for something else ( like fr.yml ) and update locale setting in the config.rb file ( i.e.,  AppConfig[:locale] = :fr )</p>
 
 <h2 id="i-just-want-to-change-a-few-things-on-the-pages">I just want to change a few things on the pages!!</h2>
 
-<p>For small edits, it’s also  easiest to do this as a plugin. With a plugin, we can override default views, controllers, models, etc. without having to do a complete rebuild of the source code. </p>
+<p>For small edits, it’s also  easiest to do this as a plugin. With a plugin, we can override default views, controllers, models, etc. without having to do a complete rebuild of the source code.</p>
 
-<p>For example, let’s say we wanted to change the branding logo on the public interface. So, first we need to find where in the views this is being rendered. A good first place to go is the <a href="https://github.com/archivesspace/archivesspace/blob/master/public/app/views/layouts/application.html.erb">layouts/application.html.erb</a> file, which is the Rails default layout for the entire site. Looking through this file, we can see the branding is being rendered in the <a href="https://github.com/archivesspace/archivesspace/blob/master/public/app/views/site/_branding.html.erb">site/branding.html.erb</a> file, which is a very simple file with pretty much just a link and image tag. </p>
+<p>For example, let’s say we wanted to change the branding logo on the public interface. So, first we need to find where in the views this is being rendered. A good first place to go is the <a href="https://github.com/archivesspace/archivesspace/blob/master/public/app/views/layouts/application.html.erb">layouts/application.html.erb</a> file, which is the Rails default layout for the entire site. Looking through this file, we can see the branding is being rendered in the <a href="https://github.com/archivesspace/archivesspace/blob/master/public/app/views/site/_branding.html.erb">site/branding.html.erb</a> file, which is a very simple file with pretty much just a link and image tag.</p>
 
 <p>So, first let’s add out image file to the “plugins/local/public/assets/images/my_archive/logo.png” then let’s override the default view by making a file in  plugins/local/public/views/site/_branding.html.erb</p>
 
-<pre><code>   &lt;h1&gt;                                                                            
+<div class="highlighter-rouge"><pre class="highlight"><code>   &lt;h1&gt;                                                                            
       &lt;img src="/assets/images/my_archive/logo.png" alt = &lt;%= I18n.t("brand.title") %&gt; /&gt;                                                            
    &lt;/h1&gt;                                                                           
 </code></pre>
+</div>
 
 <p>( Note: Since anything we add to plugins directory will not be precompiled by the Rails asset pipeline, we cannot use some of the tag helpers (like img_tag ), since that’s assuming the asset is being managed by the asset pipeline.  )</p>
 
@@ -171,48 +173,52 @@ There is also a <a href="https://github.com/archivesspace/archivesspace/blob/mas
 
 <p>You can customize CSS through the plugin system too. If you don’t want to create a whole new plugin, the easiest way is to modify the ‘local’ plugin that ships with ArchivesSpace (it’s intended for these kind of site-specific changes). As long as you’ve still got ‘local’ listed in your AppConfig[:plugins] list, your changes will get picked up.</p>
 
-<p>To do that, create a file called <code>archivesspace/plugins/local/frontend/views/layout_head.html.erb</code> and add the line:</p>
+<p>To do that, create a file called <code class="highlighter-rouge">archivesspace/plugins/local/frontend/views/layout_head.html.erb</code> and add the line:</p>
 
-<pre><code> &lt;%= stylesheet_link_tag "#{@base_url}/assets/custom.css" %&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code> &lt;%= stylesheet_link_tag "#{@base_url}/assets/custom.css" %&gt;
 </code></pre>
+</div>
 
 <p>Then place your CSS in the file:</p>
 
-<pre><code> archivesspace/plugins/local/frontend/assets/custom.css
+<div class="highlighter-rouge"><pre class="highlight"><code> archivesspace/plugins/local/frontend/assets/custom.css
 </code></pre>
+</div>
 
 <p>and it will get loaded on each page.</p>
 
 <h2 id="i-want-to-heavily-theme-my-site-and-make-a-lot-of-css-changes-and-template-changes">I want to heavily theme my site and make a lot of CSS changes and template changes!</h2>
 
-<p>If you’re wanting to really trick out your site, you could do this in a plugin using the override methods show above, although there are some big disadvantages to this. The first is that assets will not be compiled by the Rails asset pipeline. Another is that you won’t be able to take advantage of the variables and mixins that Bootstrap and Less provide as a framework, which really helps keep your assets well organized. </p>
+<p>If you’re wanting to really trick out your site, you could do this in a plugin using the override methods show above, although there are some big disadvantages to this. The first is that assets will not be compiled by the Rails asset pipeline. Another is that you won’t be able to take advantage of the variables and mixins that Bootstrap and Less provide as a framework, which really helps keep your assets well organized.</p>
 
 <p>A better way to do this is to pull down a copy of the ArchivesSpace code and build out a new theme. A good resource on how to do this is <a href="https://www.youtube.com/watch?v=Uny736mZVnk">this video</a> .
-This video covers the staff frontend UI, but the same steps can be applied to the public UI as well. </p>
+This video covers the staff frontend UI, but the same steps can be applied to the public UI as well.</p>
 
 <p>Also become a little familiar with the <a href="https://github.com/archivesspace/archivesspace/blob/master/build/README.md">build system instructions </a></p>
 
 <p>First, pull down a new copy of ArchivesSpace using git and be sure to checkout a tag matching the version you’re using or wanting to use.</p>
 
-<pre><code> $ git clone https://github.com/archivesspace/archivesspace/blob/master/build/README.md
+<div class="highlighter-rouge"><pre class="highlight"><code> $ git clone https://github.com/archivesspace/archivesspace/blob/master/build/README.md
  $ git checkout v1.0.9
 </code></pre>
+</div>
 
 <p>You can start your application development server by executing:</p>
 
-<pre><code>     $ ./build/run bootstrap
+<div class="highlighter-rouge"><pre class="highlight"><code>     $ ./build/run bootstrap
      $ ./build/run backend:devserver
      $ ./build/run frontend:devserver
      $ ./build/run public:devserver
 </code></pre>
+</div>
 
-<p>( Note: you don’t have to run all these commands all the time. The bootstrap command really only has to be run the first time your pull down the code..it will also take awhile.  You also don’t have to start the frontend or public if you’re not working on those interfaces. Backend does have to be started for either the public or frontend interfaces to work. ) </p>
+<p>( Note: you don’t have to run all these commands all the time. The bootstrap command really only has to be run the first time your pull down the code..it will also take awhile.  You also don’t have to start the frontend or public if you’re not working on those interfaces. Backend does have to be started for either the public or frontend interfaces to work. )</p>
 
-<p>Follow the insturctions in the video to create a new theme. A good way is to copy the existing default theme to a new folder and start making your updates. Be sure to take advantage of the existing variables set in the Less files to make your assets nice and organized. </p>
+<p>Follow the insturctions in the video to create a new theme. A good way is to copy the existing default theme to a new folder and start making your updates. Be sure to take advantage of the existing variables set in the Less files to make your assets nice and organized.</p>
 
-<p>Once you’ve updated you theme and have got it working, you can package your application. You can use the ./scripts/build_release to build a totally fresh AS distribution, but you don’t need to do that if you’ve simply made some minor changes to the UI. Instead, use the “./build/run public:war “ to compile your assets and package a war file. You can then take this public.war file and replace your ASpace distrubtion war file. </p>
+<p>Once you’ve updated you theme and have got it working, you can package your application. You can use the ./scripts/build_release to build a totally fresh AS distribution, but you don’t need to do that if you’ve simply made some minor changes to the UI. Instead, use the “./build/run public:war “ to compile your assets and package a war file. You can then take this public.war file and replace your ASpace distrubtion war file.</p>
 
-<p>Be sure to update your theme setting in the config.rb file and restart ASpace. </p>
+<p>Be sure to update your theme setting in the config.rb file and restart ASpace.</p>
 
 
         </main>

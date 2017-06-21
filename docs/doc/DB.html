@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: DB
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.0
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "DB";
   relpath = '';
-  framesUrl = "frames.html#!DB.html";
 </script>
 
 
@@ -28,56 +27,50 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index (D)</a> &raquo;
     
     
     <span class="title">DB</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
-    </a>
-  
-    <a class="full_list_link" id="schema_list_link"
-        href="schema_list.html">
-      Schema List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="class_list.html"></iframe>
 
-    <div id="content"><h1>Class: DB
+      <div id="content"><h1>Class: DB
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -88,21 +81,25 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">backend/app/model/db.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>backend/app/model/db.rb</dd>
+  </dl>
+  
+</div>
 
 <h2>Defined Under Namespace</h2>
 <p class="children">
@@ -118,13 +115,12 @@
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="SUPPORTED_DATABASES-constant" class="">SUPPORTED_DATABASES =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrack token'>[</span>
+  <dl class="constants">
+    
+      <dt id="SUPPORTED_DATABASES-constant" class="">SUPPORTED_DATABASES =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrack token'>[</span>
  <span class='lbrace token'>{</span>
    <span class='symbol val'>:pattern</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='regexp val'>/jdbc:mysql/</span><span class='comma token'>,</span>
    <span class='symbol val'>:name</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;MySQL&quot;</span>
@@ -135,9 +131,8 @@
  <span class='rbrace token'>}</span>
 <span class='rbrack token'>]</span>
 </pre></dd>
-      
-    </dl>
-  
+    
+  </dl>
 
 
 
@@ -148,7 +143,7 @@
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -156,7 +151,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#after_commit-class_method" title="after_commit (class method)">+ (Object) <strong>after_commit</strong>(&amp;block) </a>
+      <a href="#after_commit-class_method" title="after_commit (class method)">.<strong>after_commit</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -179,7 +174,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#attempt-class_method" title="attempt (class method)">+ (Object) <strong>attempt</strong>(&amp;block) </a>
+      <a href="#attempt-class_method" title="attempt (class method)">.<strong>attempt</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -202,7 +197,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#backups_dir-class_method" title="backups_dir (class method)">+ (Object) <strong>backups_dir</strong> </a>
+      <a href="#backups_dir-class_method" title="backups_dir (class method)">.<strong>backups_dir</strong>  &#x21d2; Object </a>
     
 
     
@@ -225,7 +220,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#blobify-class_method" title="blobify (class method)">+ (Object) <strong>blobify</strong>(s) </a>
+      <a href="#blobify-class_method" title="blobify (class method)">.<strong>blobify</strong>(s)  &#x21d2; Object </a>
     
 
     
@@ -248,7 +243,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#check_supported-class_method" title="check_supported (class method)">+ (Object) <strong>check_supported</strong>(url) </a>
+      <a href="#check_supported-class_method" title="check_supported (class method)">.<strong>check_supported</strong>(url)  &#x21d2; Object </a>
     
 
     
@@ -271,7 +266,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#concat-class_method" title="concat (class method)">+ (Object) <strong>concat</strong>(s1, s2) </a>
+      <a href="#concat-class_method" title="concat (class method)">.<strong>concat</strong>(s1, s2)  &#x21d2; Object </a>
     
 
     
@@ -294,7 +289,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#connect-class_method" title="connect (class method)">+ (Object) <strong>connect</strong> </a>
+      <a href="#connect-class_method" title="connect (class method)">.<strong>connect</strong>  &#x21d2; Object </a>
     
 
     
@@ -317,7 +312,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#connected%3F-class_method" title="connected? (class method)">+ (Boolean) <strong>connected?</strong> </a>
+      <a href="#connected%3F-class_method" title="connected? (class method)">.<strong>connected?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -340,7 +335,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#demo_db_backup-class_method" title="demo_db_backup (class method)">+ (Object) <strong>demo_db_backup</strong> </a>
+      <a href="#demo_db_backup-class_method" title="demo_db_backup (class method)">.<strong>demo_db_backup</strong>  &#x21d2; Object </a>
     
 
     
@@ -363,7 +358,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#disconnect-class_method" title="disconnect (class method)">+ (Object) <strong>disconnect</strong> </a>
+      <a href="#disconnect-class_method" title="disconnect (class method)">.<strong>disconnect</strong>  &#x21d2; Object </a>
     
 
     
@@ -386,7 +381,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#ensure_tables_are_utf8-class_method" title="ensure_tables_are_utf8 (class method)">+ (Object) <strong>ensure_tables_are_utf8</strong>(db) </a>
+      <a href="#ensure_tables_are_utf8-class_method" title="ensure_tables_are_utf8 (class method)">.<strong>ensure_tables_are_utf8</strong>(db)  &#x21d2; Object </a>
     
 
     
@@ -409,7 +404,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#expire_backups-class_method" title="expire_backups (class method)">+ (Object) <strong>expire_backups</strong> </a>
+      <a href="#expire_backups-class_method" title="expire_backups (class method)">.<strong>expire_backups</strong>  &#x21d2; Object </a>
     
 
     
@@ -432,7 +427,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#increase_lock_version_or_fail-class_method" title="increase_lock_version_or_fail (class method)">+ (Object) <strong>increase_lock_version_or_fail</strong>(obj) </a>
+      <a href="#in_transaction%3F-class_method" title="in_transaction? (class method)">.<strong>in_transaction?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -455,7 +450,30 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#is_integrity_violation-class_method" title="is_integrity_violation (class method)">+ (Object) <strong>is_integrity_violation</strong>(exception) </a>
+      <a href="#increase_lock_version_or_fail-class_method" title="increase_lock_version_or_fail (class method)">.<strong>increase_lock_version_or_fail</strong>(obj)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_integrity_violation-class_method" title="is_integrity_violation (class method)">.<strong>is_integrity_violation</strong>(exception)  &#x21d2; Object </a>
     
 
     
@@ -478,7 +496,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#is_retriable_exception-class_method" title="is_retriable_exception (class method)">+ (Object) <strong>is_retriable_exception</strong>(exception, opts = {}) </a>
+      <a href="#is_retriable_exception-class_method" title="is_retriable_exception (class method)">.<strong>is_retriable_exception</strong>(exception, opts = {})  &#x21d2; Object </a>
     
 
     
@@ -501,7 +519,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#jdbc_metadata-class_method" title="jdbc_metadata (class method)">+ (Object) <strong>jdbc_metadata</strong> </a>
+      <a href="#jdbc_metadata-class_method" title="jdbc_metadata (class method)">.<strong>jdbc_metadata</strong>  &#x21d2; Object </a>
     
 
     
@@ -524,7 +542,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#needs_blob_hack%3F-class_method" title="needs_blob_hack? (class method)">+ (Boolean) <strong>needs_blob_hack?</strong> </a>
+      <a href="#needs_blob_hack%3F-class_method" title="needs_blob_hack? (class method)">.<strong>needs_blob_hack?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -547,7 +565,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#needs_savepoint%3F-class_method" title="needs_savepoint? (class method)">+ (Boolean) <strong>needs_savepoint?</strong> </a>
+      <a href="#needs_savepoint%3F-class_method" title="needs_savepoint? (class method)">.<strong>needs_savepoint?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -570,7 +588,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#open-class_method" title="open (class method)">+ (Object) <strong>open</strong>(transaction = true, opts = {}) </a>
+      <a href="#open-class_method" title="open (class method)">.<strong>open</strong>(transaction = true, opts = {})  &#x21d2; Object </a>
     
 
     
@@ -593,7 +611,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#supports_jasper%3F-class_method" title="supports_jasper? (class method)">+ (Boolean) <strong>supports_jasper?</strong> </a>
+      <a href="#session_storage-class_method" title="session_storage (class method)">.<strong>session_storage</strong>  &#x21d2; Object </a>
     
 
     
@@ -616,7 +634,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#supports_join_updates%3F-class_method" title="supports_join_updates? (class method)">+ (Boolean) <strong>supports_join_updates?</strong> </a>
+      <a href="#supports_jasper%3F-class_method" title="supports_jasper? (class method)">.<strong>supports_jasper?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -639,7 +657,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#supports_mvcc%3F-class_method" title="supports_mvcc? (class method)">+ (Boolean) <strong>supports_mvcc?</strong> </a>
+      <a href="#supports_join_updates%3F-class_method" title="supports_join_updates? (class method)">.<strong>supports_join_updates?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -662,7 +680,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sysinfo-class_method" title="sysinfo (class method)">+ (Object) <strong>sysinfo</strong> </a>
+      <a href="#supports_mvcc%3F-class_method" title="supports_mvcc? (class method)">.<strong>supports_mvcc?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -685,7 +703,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#system_metadata-class_method" title="system_metadata (class method)">+ (Object) <strong>system_metadata</strong> </a>
+      <a href="#sysinfo-class_method" title="sysinfo (class method)">.<strong>sysinfo</strong>  &#x21d2; Object </a>
     
 
     
@@ -708,7 +726,30 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transaction-class_method" title="transaction (class method)">+ (Object) <strong>transaction</strong>(*args) </a>
+      <a href="#system_metadata-class_method" title="system_metadata (class method)">.<strong>system_metadata</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transaction-class_method" title="transaction (class method)">.<strong>transaction</strong>(*args)  &#x21d2; Object </a>
     
 
     
@@ -740,7 +781,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="after_commit-class_method">
   
-    + (<tt>Object</tt>) <strong>after_commit</strong>(&amp;block) 
+    .<strong>after_commit</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -783,7 +824,7 @@
       <div class="method_details ">
   <h3 class="signature " id="attempt-class_method">
   
-    + (<tt>Object</tt>) <strong>attempt</strong>(&amp;block) 
+    .<strong>attempt</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -795,12 +836,12 @@
       <pre class="lines">
 
 
-218
-219
-220</pre>
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 218</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 239</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_attempt identifier id'>attempt</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='rubyid_block identifier id'>block</span><span class='rparen token'>)</span>
   <span class='rubyid_DBAttempt constant id'>DBAttempt</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_block identifier id'>block</span><span class='rparen token'>)</span>
@@ -814,7 +855,7 @@
       <div class="method_details ">
   <h3 class="signature " id="backups_dir-class_method">
   
-    + (<tt>Object</tt>) <strong>backups_dir</strong> 
+    .<strong>backups_dir</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -826,12 +867,12 @@
       <pre class="lines">
 
 
-290
-291
-292</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 290</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 311</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_backups_dir identifier id'>backups_dir</span>
   <span class='rubyid_AppConfig constant id'>AppConfig</span><span class='lbrack token'>[</span><span class='symbol val'>:backup_directory</span><span class='rbrack token'>]</span>
@@ -845,7 +886,7 @@
       <div class="method_details ">
   <h3 class="signature " id="blobify-class_method">
   
-    + (<tt>Object</tt>) <strong>blobify</strong>(s) 
+    .<strong>blobify</strong>(s)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -857,12 +898,12 @@
       <pre class="lines">
 
 
-364
-365
-366</pre>
+385
+386
+387</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 364</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 385</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_blobify identifier id'>blobify</span><span class='lparen token'>(</span><span class='rubyid_s identifier id'>s</span><span class='rparen token'>)</span>
   <span class='lparen token'>(</span><span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_database_type identifier id'>database_type</span> <span class='eq op'>==</span> <span class='symbol val'>:derby</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rubyid_s identifier id'>s</span><span class='dot token'>.</span><span class='rubyid_to_sequel_blob identifier id'>to_sequel_blob</span> <span class='colon op'>:</span> <span class='rubyid_s identifier id'>s</span>
@@ -876,7 +917,7 @@
       <div class="method_details ">
   <h3 class="signature " id="check_supported-class_method">
   
-    + (<tt>Object</tt>) <strong>check_supported</strong>(url) 
+    .<strong>check_supported</strong>(url)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -888,26 +929,26 @@
       <pre class="lines">
 
 
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259</pre>
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 264</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_check_supported identifier id'>check_supported</span><span class='lparen token'>(</span><span class='rubyid_url identifier id'>url</span><span class='rparen token'>)</span>
   <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_SUPPORTED_DATABASES constant id'>SUPPORTED_DATABASES</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_db identifier id'>db</span><span class='bitor op'>|</span> <span class='rubyid_url identifier id'>url</span> <span class='match op'>=~</span> <span class='rubyid_db identifier id'>db</span><span class='lbrack token'>[</span><span class='symbol val'>:pattern</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
@@ -935,7 +976,7 @@
       <div class="method_details ">
   <h3 class="signature " id="concat-class_method">
   
-    + (<tt>Object</tt>) <strong>concat</strong>(s1, s2) 
+    .<strong>concat</strong>(s1, s2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -947,16 +988,16 @@
       <pre class="lines">
 
 
-369
-370
-371
-372
-373
-374
-375</pre>
+390
+391
+392
+393
+394
+395
+396</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 369</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 390</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_concat identifier id'>concat</span><span class='lparen token'>(</span><span class='rubyid_s1 identifier id'>s1</span><span class='comma token'>,</span> <span class='rubyid_s2 identifier id'>s2</span><span class='rparen token'>)</span>
   <span class='rubyid_if if kw'>if</span> <span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_database_type identifier id'>database_type</span> <span class='eq op'>==</span> <span class='symbol val'>:derby</span>
@@ -974,7 +1015,7 @@
       <div class="method_details ">
   <h3 class="signature " id="connect-class_method">
   
-    + (<tt>Object</tt>) <strong>connect</strong> 
+    .<strong>connect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1055,7 +1096,7 @@
       <div class="method_details ">
   <h3 class="signature " id="connected?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>connected?</strong> 
+    .<strong>connected?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1109,7 +1150,7 @@
       <div class="method_details ">
   <h3 class="signature " id="demo_db_backup-class_method">
   
-    + (<tt>Object</tt>) <strong>demo_db_backup</strong> 
+    .<strong>demo_db_backup</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1121,24 +1162,24 @@
       <pre class="lines">
 
 
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331
-332</pre>
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 318</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 339</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_demo_db_backup identifier id'>demo_db_backup</span>
   <span class='comment val'># Timestamp must come first here for filenames to sort chronologically</span>
@@ -1164,7 +1205,7 @@
       <div class="method_details ">
   <h3 class="signature " id="disconnect-class_method">
   
-    + (<tt>Object</tt>) <strong>disconnect</strong> 
+    .<strong>disconnect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1176,12 +1217,12 @@
       <pre class="lines">
 
 
-238
-239
-240</pre>
+259
+260
+261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 238</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 259</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_disconnect identifier id'>disconnect</span>
   <span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_disconnect identifier id'>disconnect</span>
@@ -1195,7 +1236,7 @@
       <div class="method_details ">
   <h3 class="signature " id="ensure_tables_are_utf8-class_method">
   
-    + (<tt>Object</tt>) <strong>ensure_tables_are_utf8</strong>(db) 
+    .<strong>ensure_tables_are_utf8</strong>(db)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1252,7 +1293,7 @@
       <div class="method_details ">
   <h3 class="signature " id="expire_backups-class_method">
   
-    + (<tt>Object</tt>) <strong>expire_backups</strong> 
+    .<strong>expire_backups</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1264,30 +1305,30 @@
       <pre class="lines">
 
 
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315</pre>
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 295</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 316</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_expire_backups identifier id'>expire_backups</span>
 
@@ -1317,9 +1358,63 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="in_transaction?-class_method">
+  
+    .<strong>in_transaction?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 185</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_in_transaction? fid id'>in_transaction?</span>
+  <span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_in_transaction? fid id'>in_transaction?</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="increase_lock_version_or_fail-class_method">
   
-    + (<tt>Object</tt>) <strong>increase_lock_version_or_fail</strong>(obj) 
+    .<strong>increase_lock_version_or_fail</strong>(obj)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1331,18 +1426,18 @@
       <pre class="lines">
 
 
-335
-336
-337
-338
-339
-340
-341
-342
-343</pre>
+356
+357
+358
+359
+360
+361
+362
+363
+364</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 335</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 356</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_increase_lock_version_or_fail identifier id'>increase_lock_version_or_fail</span><span class='lparen token'>(</span><span class='rubyid_obj identifier id'>obj</span><span class='rparen token'>)</span>
   <span class='rubyid_updated_rows identifier id'>updated_rows</span> <span class='assign token'>=</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_class identifier id'>class</span><span class='dot token'>.</span><span class='rubyid_dataset identifier id'>dataset</span><span class='dot token'>.</span><span class='rubyid_filter identifier id'>filter</span><span class='lparen token'>(</span><span class='symbol val'>:id</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_id identifier id'>id</span><span class='comma token'>,</span> <span class='symbol val'>:lock_version</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_obj identifier id'>obj</span><span class='dot token'>.</span><span class='rubyid_lock_version identifier id'>lock_version</span><span class='rparen token'>)</span><span class='dot token'>.</span>
@@ -1362,7 +1457,7 @@
       <div class="method_details ">
   <h3 class="signature " id="is_integrity_violation-class_method">
   
-    + (<tt>Object</tt>) <strong>is_integrity_violation</strong>(exception) 
+    .<strong>is_integrity_violation</strong>(exception)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1384,12 +1479,12 @@
       <pre class="lines">
 
 
-224
-225
-226</pre>
+245
+246
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 245</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_is_integrity_violation identifier id'>is_integrity_violation</span><span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span><span class='rparen token'>)</span>
   <span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_wrapped_exception identifier id'>wrapped_exception</span><span class='dot token'>.</span><span class='rubyid_cause identifier id'>cause</span> <span class='rubyid_or or kw'>or</span> <span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_wrapped_exception identifier id'>wrapped_exception</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_getSQLState identifier id'>getSQLState</span><span class='lparen token'>(</span><span class='rparen token'>)</span> <span class='match op'>=~</span> <span class='regexp val'>/^23/</span>
@@ -1403,7 +1498,7 @@
       <div class="method_details ">
   <h3 class="signature " id="is_retriable_exception-class_method">
   
-    + (<tt>Object</tt>) <strong>is_retriable_exception</strong>(exception, opts = {}) 
+    .<strong>is_retriable_exception</strong>(exception, opts = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1415,23 +1510,23 @@
       <pre class="lines">
 
 
-229
-230
-231
-232
-233
-234
-235</pre>
+250
+251
+252
+253
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 250</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_is_retriable_exception identifier id'>is_retriable_exception</span><span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='comment val'># Transaction was rolled back, but we can retry</span>
   <span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_instance_of? fid id'>instance_of?</span><span class='lparen token'>(</span><span class='rubyid_RetryTransaction constant id'>RetryTransaction</span><span class='rparen token'>)</span> <span class='orop op'>||</span>
    <span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:retry_on_optimistic_locking_fail</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span>
     <span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_instance_of? fid id'>instance_of?</span><span class='lparen token'>(</span><span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_Plugins constant id'>Plugins</span><span class='colon2 op'>::</span><span class='rubyid_OptimisticLocking constant id'>OptimisticLocking</span><span class='colon2 op'>::</span><span class='rubyid_Error constant id'>Error</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='orop op'>||</span>
-   <span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_wrapped_exception identifier id'>wrapped_exception</span><span class='dot token'>.</span><span class='rubyid_cause identifier id'>cause</span> <span class='rubyid_or or kw'>or</span> <span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_wrapped_exception identifier id'>wrapped_exception</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_getSQLState identifier id'>getSQLState</span><span class='lparen token'>(</span><span class='rparen token'>)</span> <span class='match op'>=~</span> <span class='regexp val'>/^(40|41)/</span><span class='rparen token'>)</span>
+   <span class='lparen token'>(</span><span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_wrapped_exception identifier id'>wrapped_exception</span> <span class='andop op'>&amp;&amp;</span> <span class='lparen token'>(</span> <span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_wrapped_exception identifier id'>wrapped_exception</span><span class='dot token'>.</span><span class='rubyid_cause identifier id'>cause</span> <span class='rubyid_or or kw'>or</span> <span class='rubyid_exception identifier id'>exception</span><span class='dot token'>.</span><span class='rubyid_wrapped_exception identifier id'>wrapped_exception</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_getSQLState identifier id'>getSQLState</span><span class='lparen token'>(</span><span class='rparen token'>)</span> <span class='match op'>=~</span> <span class='regexp val'>/^(40|41)/</span><span class='rparen token'>)</span> <span class='rparen token'>)</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -1442,7 +1537,7 @@
       <div class="method_details ">
   <h3 class="signature " id="jdbc_metadata-class_method">
   
-    + (<tt>Object</tt>) <strong>jdbc_metadata</strong> 
+    .<strong>jdbc_metadata</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1454,14 +1549,14 @@
       <pre class="lines">
 
 
-173
-174
-175
-176
-177</pre>
+194
+195
+196
+197
+198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 194</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_jdbc_metadata identifier id'>jdbc_metadata</span>
   <span class='rubyid_md identifier id'>md</span> <span class='assign token'>=</span>  <span class='rubyid_open identifier id'>open</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_p identifier id'>p</span><span class='bitor op'>|</span>  <span class='rubyid_p identifier id'>p</span><span class='dot token'>.</span><span class='rubyid_synchronize identifier id'>synchronize</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_c identifier id'>c</span><span class='bitor op'>|</span> <span class='rubyid_c identifier id'>c</span><span class='dot token'>.</span><span class='rubyid_getMetaData identifier id'>getMetaData</span> <span class='rbrace token'>}</span><span class='rbrace token'>}</span> 
@@ -1477,7 +1572,7 @@
       <div class="method_details ">
   <h3 class="signature " id="needs_blob_hack?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>needs_blob_hack?</strong> 
+    .<strong>needs_blob_hack?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1512,12 +1607,12 @@
       <pre class="lines">
 
 
-360
-361
-362</pre>
+381
+382
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 360</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 381</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_needs_blob_hack? fid id'>needs_blob_hack?</span>
   <span class='lparen token'>(</span><span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_database_type identifier id'>database_type</span> <span class='eq op'>==</span> <span class='symbol val'>:derby</span><span class='rparen token'>)</span>
@@ -1531,7 +1626,7 @@
       <div class="method_details ">
   <h3 class="signature " id="needs_savepoint?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>needs_savepoint?</strong> 
+    .<strong>needs_savepoint?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1566,15 +1661,15 @@
       <pre class="lines">
 
 
-184
-185
-186
-187
-188
-189</pre>
+205
+206
+207
+208
+209
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 184</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 205</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_needs_savepoint? fid id'>needs_savepoint?</span>
   <span class='comment val'># Postgres needs a savepoint for any statement that might fail</span>
@@ -1591,7 +1686,7 @@
       <div class="method_details ">
   <h3 class="signature " id="open-class_method">
   
-    + (<tt>Object</tt>) <strong>open</strong>(transaction = true, opts = {}) 
+    .<strong>open</strong>(transaction = true, opts = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1603,10 +1698,6 @@
       <pre class="lines">
 
 
-116
-117
-118
-119
 120
 121
 122
@@ -1652,60 +1743,123 @@
 162
 163
 164
-165</pre>
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 120</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_transaction identifier id'>transaction</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># Give us a place to hang storage that relates to the current database</span>
+  <span class='comment val'># session.</span>
+  <span class='rubyid_Thread constant id'>Thread</span><span class='dot token'>.</span><span class='rubyid_current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:db_session_storage</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_Thread constant id'>Thread</span><span class='dot token'>.</span><span class='rubyid_current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:nesting_level</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='integer val'>0</span>
+  <span class='rubyid_Thread constant id'>Thread</span><span class='dot token'>.</span><span class='rubyid_current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:nesting_level</span><span class='rbrack token'>]</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='rubyid_last_err identifier id'>last_err</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+    <span class='rubyid_retries identifier id'>retries</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:retries</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>10</span>
+
+    <span class='rubyid_retries identifier id'>retries</span><span class='dot token'>.</span><span class='rubyid_times identifier id'>times</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_attempt identifier id'>attempt</span><span class='bitor op'>|</span>
+      <span class='rubyid_begin begin kw'>begin</span>
+        <span class='rubyid_if if kw'>if</span> <span class='rubyid_transaction identifier id'>transaction</span>
+          <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_transaction identifier id'>transaction</span> <span class='rubyid_do do kw'>do</span>
+            <span class='rubyid_return return kw'>return</span> <span class='rubyid_yield yield kw'>yield</span> <span class='rubyid_@pool ivar id'>@pool</span>
+          <span class='rubyid_end end kw'>end</span>
+
+          <span class='comment val'># Sometimes we'll make it to here.  That means we threw a</span>
+          <span class='comment val'># Sequel::Rollback which has been quietly caught.</span>
+          <span class='rubyid_return return kw'>return</span> <span class='rubyid_nil nil kw'>nil</span>
+        <span class='rubyid_else else kw'>else</span>
+          <span class='rubyid_begin begin kw'>begin</span>
+            <span class='rubyid_return return kw'>return</span> <span class='rubyid_yield yield kw'>yield</span> <span class='rubyid_@pool ivar id'>@pool</span>
+          <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_Rollback constant id'>Rollback</span>
+            <span class='comment val'># If we're not in a transaction we can't roll back, but no need to blow up.</span>
+            <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='string val'>&quot;Sequel::Rollback caught but we're not inside of a transaction&quot;</span><span class='rparen token'>)</span>
+            <span class='rubyid_return return kw'>return</span> <span class='rubyid_nil nil kw'>nil</span>
+          <span class='rubyid_end end kw'>end</span>
+        <span class='rubyid_end end kw'>end</span>
+
+
+      <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_DatabaseDisconnectError constant id'>DatabaseDisconnectError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+        <span class='comment val'># MySQL might have been restarted.</span>
+        <span class='rubyid_last_err identifier id'>last_err</span> <span class='assign token'>=</span> <span class='rubyid_e identifier id'>e</span>
+        <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span><span class='string val'>&quot;Connecting to the database failed.  Retrying...&quot;</span><span class='rparen token'>)</span>
+        <span class='rubyid_sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:db_failed_retry_delay</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>3</span><span class='rparen token'>)</span>
+
+
+      <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_NoExistingObject constant id'>NoExistingObject</span><span class='comma token'>,</span> <span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_DatabaseError constant id'>DatabaseError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+        <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_attempt identifier id'>attempt</span> <span class='plus op'>+</span> <span class='integer val'>1</span><span class='rparen token'>)</span> <span class='lt op'>&lt;</span> <span class='rubyid_retries identifier id'>retries</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_is_retriable_exception identifier id'>is_retriable_exception</span><span class='lparen token'>(</span><span class='rubyid_e identifier id'>e</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_transaction identifier id'>transaction</span>
+          <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Retrying transaction after retriable exception (#{e})&quot;</span><span class='rparen token'>)</span>
+          <span class='rubyid_sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:retry_delay</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>1</span><span class='rparen token'>)</span>
+        <span class='rubyid_else else kw'>else</span>
+          <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_e identifier id'>e</span>
+        <span class='rubyid_end end kw'>end</span>
+      <span class='rubyid_end end kw'>end</span>
+
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_last_err identifier id'>last_err</span>
+        <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_error identifier id'>error</span><span class='lparen token'>(</span><span class='string val'>&quot;Failed to connect to the database&quot;</span><span class='rparen token'>)</span>
+        <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_exception identifier id'>exception</span><span class='lparen token'>(</span><span class='rubyid_last_err identifier id'>last_err</span><span class='rparen token'>)</span>
+
+        <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;Failed to connect to the database: #{last_err}&quot;</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_ensure ensure kw'>ensure</span>
+    <span class='rubyid_Thread constant id'>Thread</span><span class='dot token'>.</span><span class='rubyid_current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:nesting_level</span><span class='rbrack token'>]</span> <span class='opasgn op'>-=</span> <span class='integer val'>1</span>
+
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_Thread constant id'>Thread</span><span class='dot token'>.</span><span class='rubyid_current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:nesting_level</span><span class='rbrack token'>]</span> <span class='leq op'>&lt;=</span> <span class='integer val'>0</span>
+      <span class='rubyid_Thread constant id'>Thread</span><span class='dot token'>.</span><span class='rubyid_current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:db_session_storage</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="session_storage-class_method">
+  
+    .<strong>session_storage</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 116</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_transaction identifier id'>transaction</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
-  <span class='rubyid_last_err identifier id'>last_err</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
-  <span class='rubyid_retries identifier id'>retries</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:retries</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>10</span>
-
-  <span class='rubyid_retries identifier id'>retries</span><span class='dot token'>.</span><span class='rubyid_times identifier id'>times</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_attempt identifier id'>attempt</span><span class='bitor op'>|</span>
-    <span class='rubyid_begin begin kw'>begin</span>
-      <span class='rubyid_if if kw'>if</span> <span class='rubyid_transaction identifier id'>transaction</span>
-        <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_transaction identifier id'>transaction</span> <span class='rubyid_do do kw'>do</span>
-          <span class='rubyid_return return kw'>return</span> <span class='rubyid_yield yield kw'>yield</span> <span class='rubyid_@pool ivar id'>@pool</span>
-        <span class='rubyid_end end kw'>end</span>
-
-        <span class='comment val'># Sometimes we'll make it to here.  That means we threw a</span>
-        <span class='comment val'># Sequel::Rollback which has been quietly caught.</span>
-        <span class='rubyid_return return kw'>return</span> <span class='rubyid_nil nil kw'>nil</span>
-      <span class='rubyid_else else kw'>else</span>
-        <span class='rubyid_begin begin kw'>begin</span>
-          <span class='rubyid_return return kw'>return</span> <span class='rubyid_yield yield kw'>yield</span> <span class='rubyid_@pool ivar id'>@pool</span>
-        <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_Rollback constant id'>Rollback</span>
-          <span class='comment val'># If we're not in a transaction we can't roll back, but no need to blow up.</span>
-          <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='string val'>&quot;Sequel::Rollback caught but we're not inside of a transaction&quot;</span><span class='rparen token'>)</span>
-          <span class='rubyid_return return kw'>return</span> <span class='rubyid_nil nil kw'>nil</span>
-        <span class='rubyid_end end kw'>end</span>
-      <span class='rubyid_end end kw'>end</span>
-
-
-    <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_DatabaseDisconnectError constant id'>DatabaseDisconnectError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
-      <span class='comment val'># MySQL might have been restarted.</span>
-      <span class='rubyid_last_err identifier id'>last_err</span> <span class='assign token'>=</span> <span class='rubyid_e identifier id'>e</span>
-      <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span><span class='string val'>&quot;Connecting to the database failed.  Retrying...&quot;</span><span class='rparen token'>)</span>
-      <span class='rubyid_sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:db_failed_retry_delay</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>3</span><span class='rparen token'>)</span>
-
-
-    <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Sequel constant id'>Sequel</span><span class='colon2 op'>::</span><span class='rubyid_DatabaseError constant id'>DatabaseError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
-      <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_attempt identifier id'>attempt</span> <span class='plus op'>+</span> <span class='integer val'>1</span><span class='rparen token'>)</span> <span class='lt op'>&lt;</span> <span class='rubyid_retries identifier id'>retries</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_is_retriable_exception identifier id'>is_retriable_exception</span><span class='lparen token'>(</span><span class='rubyid_e identifier id'>e</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_transaction identifier id'>transaction</span>
-        <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Retrying transaction after retriable exception (#{e})&quot;</span><span class='rparen token'>)</span>
-        <span class='rubyid_sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:retry_delay</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>1</span><span class='rparen token'>)</span>
-      <span class='rubyid_else else kw'>else</span>
-        <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_e identifier id'>e</span>
-      <span class='rubyid_end end kw'>end</span>
-    <span class='rubyid_end end kw'>end</span>
-
-  <span class='rubyid_end end kw'>end</span>
-
-  <span class='rubyid_if if kw'>if</span> <span class='rubyid_last_err identifier id'>last_err</span>
-    <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_error identifier id'>error</span><span class='lparen token'>(</span><span class='string val'>&quot;Failed to connect to the database&quot;</span><span class='rparen token'>)</span>
-    <span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_exception identifier id'>exception</span><span class='lparen token'>(</span><span class='rubyid_last_err identifier id'>last_err</span><span class='rparen token'>)</span>
-
-    <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;Failed to connect to the database: #{last_err}&quot;</span>
-  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_session_storage identifier id'>session_storage</span>
+  <span class='rubyid_Thread constant id'>Thread</span><span class='dot token'>.</span><span class='rubyid_current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:db_session_storage</span><span class='rbrack token'>]</span> <span class='rubyid_or or kw'>or</span> <span class='rubyid_raise identifier id'>raise</span> <span class='string val'>&quot;Not inside transaction!&quot;</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -1716,7 +1870,7 @@
       <div class="method_details ">
   <h3 class="signature " id="supports_jasper?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>supports_jasper?</strong> 
+    .<strong>supports_jasper?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1751,12 +1905,12 @@
       <pre class="lines">
 
 
-345
-346
-347</pre>
+366
+367
+368</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 345</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 366</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_supports_jasper? fid id'>supports_jasper?</span>
   <span class='notop op'>!</span><span class='lbrack token'>[</span><span class='symbol val'>:derby</span><span class='comma token'>,</span> <span class='symbol val'>:h2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_database_type identifier id'>database_type</span><span class='rparen token'>)</span>
@@ -1770,7 +1924,7 @@
       <div class="method_details ">
   <h3 class="signature " id="supports_join_updates?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>supports_join_updates?</strong> 
+    .<strong>supports_join_updates?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1805,12 +1959,12 @@
       <pre class="lines">
 
 
-355
-356
-357</pre>
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 355</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 376</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_supports_join_updates? fid id'>supports_join_updates?</span>
   <span class='notop op'>!</span><span class='lbrack token'>[</span><span class='symbol val'>:derby</span><span class='comma token'>,</span> <span class='symbol val'>:h2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_database_type identifier id'>database_type</span><span class='rparen token'>)</span>
@@ -1824,7 +1978,7 @@
       <div class="method_details ">
   <h3 class="signature " id="supports_mvcc?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>supports_mvcc?</strong> 
+    .<strong>supports_mvcc?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1859,12 +2013,12 @@
       <pre class="lines">
 
 
-350
-351
-352</pre>
+371
+372
+373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 350</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 371</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_supports_mvcc? fid id'>supports_mvcc?</span>
   <span class='notop op'>!</span><span class='lbrack token'>[</span><span class='symbol val'>:derby</span><span class='comma token'>,</span> <span class='symbol val'>:h2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_@pool ivar id'>@pool</span><span class='dot token'>.</span><span class='rubyid_database_type identifier id'>database_type</span><span class='rparen token'>)</span>
@@ -1878,7 +2032,7 @@
       <div class="method_details ">
   <h3 class="signature " id="sysinfo-class_method">
   
-    + (<tt>Object</tt>) <strong>sysinfo</strong> 
+    .<strong>sysinfo</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1890,12 +2044,12 @@
       <pre class="lines">
 
 
-168
-169
-170</pre>
+189
+190
+191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 189</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_sysinfo identifier id'>sysinfo</span>
   <span class='rubyid_jdbc_metadata identifier id'>jdbc_metadata</span><span class='dot token'>.</span><span class='rubyid_merge identifier id'>merge</span><span class='lparen token'>(</span><span class='rubyid_system_metadata identifier id'>system_metadata</span><span class='rparen token'>)</span> 
@@ -1909,7 +2063,7 @@
       <div class="method_details ">
   <h3 class="signature " id="system_metadata-class_method">
   
-    + (<tt>Object</tt>) <strong>system_metadata</strong> 
+    .<strong>system_metadata</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1921,13 +2075,13 @@
       <pre class="lines">
 
 
-179
-180
-181
-182</pre>
+200
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'backend/app/model/db.rb', line 200</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_system_metadata identifier id'>system_metadata</span>
   <span class='rubyid_RbConfig constant id'>RbConfig</span><span class='dot token'>.</span><span class='rubyid_const_get identifier id'>const_get</span><span class='lparen token'>(</span><span class='string val'>&quot;CONFIG&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_select identifier id'>select</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_key identifier id'>key</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='string val'>'host_os'</span><span class='comma token'>,</span> <span class='string val'>'host_cpu'</span><span class='comma token'>,</span> 
@@ -1942,7 +2096,7 @@
       <div class="method_details ">
   <h3 class="signature " id="transaction-class_method">
   
-    + (<tt>Object</tt>) <strong>transaction</strong>(*args) 
+    .<strong>transaction</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1978,10 +2132,11 @@
 
 </div>
 
-    <div id="footer">
-  ArchivesSpace Version v1.4.0-rc8 Documentation Generated on Mon Sep 28 17:34:51 2015 by
+      <div id="footer">
+  ArchivesSpace Version v1.5.3.a Documentation Generated on Thu Mar 16 15:24:14 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-1.9.3).
+  0.9.0 (ruby-1.9.3).
 </div>
+    </div>
   </body>
 </html>

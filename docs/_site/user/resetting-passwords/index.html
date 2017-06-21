@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -122,11 +122,12 @@
           
             <h1 class="title">Resetting passwords</h2>
           
-          <p>Under the <code>scripts</code> directory you will find a script that lets you
+          <p>Under the <code class="highlighter-rouge">scripts</code> directory you will find a script that lets you
 reset a user’s password.  You can invoke it as:</p>
 
-<pre><code>scripts/password-reset.sh theusername newpassword  # or password-reset.bat under Windows
+<div class="highlighter-rouge"><pre class="highlight"><code>scripts/password-reset.sh theusername newpassword  # or password-reset.bat under Windows
 </code></pre>
+</div>
 
 <p>If you are running against MySQL, you can use this command to set a
 password while the system is running.  If you are running against the

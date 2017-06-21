@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -132,7 +132,7 @@
   <li>Signup for an account at newrelic (there is a free tier and paid plans)</li>
   <li>Edit config.rb to:
     <ul>
-      <li>activate the <code>newrelic</code> plugin</li>
+      <li>activate the <code class="highlighter-rouge">newrelic</code> plugin</li>
       <li>add the New Relic license key</li>
       <li>add an application name to identify the ArchivesSpace instance in the New Relic dashboard</li>
     </ul>
@@ -141,12 +141,13 @@
 
 <p>For example, in config.rb:</p>
 
-<pre><code>## You may have other plugins
+<div class="highlighter-rouge"><pre class="highlight"><code>## You may have other plugins
 AppConfig[:plugins] = ['local', 'newrelic']
 
 AppConfig[:newrelic_key] = "enteryourkeyhere"
 AppConfig[:newrelic_app_name] = "ArchivesSpace"
 </code></pre>
+</div>
 
 <ul>
   <li>

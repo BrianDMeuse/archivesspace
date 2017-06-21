@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -155,21 +155,23 @@ types</li>
 rules that all parts of the application can share.  There is a
 JSONModel class instance for each type of record in the system, so:</p>
 
-<pre><code>JSONModel(:digital_object)
+<div class="highlighter-rouge"><pre class="highlight"><code>JSONModel(:digital_object)
 </code></pre>
+</div>
 
 <p>is a class that knows how to take a hash of properties and make sure
 those properties conform to the specification of a Digital Object:</p>
 
-<pre><code>JSONModel(:digital_object).from_hash(myhash)
+<div class="highlighter-rouge"><pre class="highlight"><code>JSONModel(:digital_object).from_hash(myhash)
 </code></pre>
+</div>
 
 <p>If it passes validation, a new JSONModel(:digital_object) instance is
 returned, which provides accessors for accessing its values, and
 facilities for round-tripping between JSON documents and regular Ruby
 hashes:</p>
 
-<pre><code> obj = JSONModel(:digital_object).from_hash(myhash)
+<div class="highlighter-rouge"><pre class="highlight"><code> obj = JSONModel(:digital_object).from_hash(myhash)
 
  obj.title  # or obj['title']
  obj.title = 'a new title'  # or obj['title'] = 'a new title'
@@ -179,9 +181,10 @@ hashes:</p>
  obj.to_hash  # Turn the JSONModel object back into a regular hash
  obj.to_json  # Serialize the JSONModel object into JSON
 </code></pre>
+</div>
 
 <p>Much of the validation performed by JSONModel is provided by the JSON
-schema definitions listed in the <code>common/schemas</code> directory.  JSON
+schema definitions listed in the <code class="highlighter-rouge">common/schemas</code> directory.  JSON
 schemas provide a standard way of declaring which properties a record
 may and may not contain, along with their types and other
 restrictions.  ArchivesSpace uses these schemas to capture the
@@ -201,16 +204,18 @@ the backend.</p>
 <p>Most actions against the backend require you to be logged in as a user
 with the appropriate permissions.  By sending a request like:</p>
 
-<pre><code> POST /users/admin/login?password=login
+<div class="highlighter-rouge"><pre class="highlight"><code> POST /users/admin/login?password=login
 </code></pre>
+</div>
 
 <p>your authentication request will be validated, and a session token
 will be returned in the JSON response for your request.  To remain
 authenticated, provide this token with subsequent requests in the
-<code>X-ArchivesSpace-Session</code> header.  For example:</p>
+<code class="highlighter-rouge">X-ArchivesSpace-Session</code> header.  For example:</p>
 
-<pre><code> X-ArchivesSpace-Session: 8e921ac9bbe9a4a947eee8a7c5fa8b4c81c51729935860c1adfed60a5e4202cb
+<div class="highlighter-rouge"><pre class="highlight"><code> X-ArchivesSpace-Session: 8e921ac9bbe9a4a947eee8a7c5fa8b4c81c51729935860c1adfed60a5e4202cb
 </code></pre>
+</div>
 
 <h4 id="crud">CRUD</h4>
 
@@ -218,7 +223,7 @@ authenticated, provide this token with subsequent requests in the
 different “top-level” record types.  Working with records follows a
 fairly standard pattern:</p>
 
-<pre><code> # Get a paginated list of accessions from repository '123'
+<div class="highlighter-rouge"><pre class="highlight"><code> # Get a paginated list of accessions from repository '123'
  GET /repositories/123/accessions?page=1
 
  # Create a new accession, returning the ID of the new record
@@ -232,6 +237,7 @@ fairly standard pattern:</p>
  POST /repositories/123/accessions/456
  {... a JSON document satisfying JSONModel(:accession) here ...}
 </code></pre>
+</div>
 
 <h3 id="jsonmodelclient----a-high-level-api-for-interacting-with-the-archivesspace-backend">JSONModel::Client – A high-level API for interacting with the ArchivesSpace backend</h3>
 
@@ -240,19 +246,21 @@ ships with a module called JSONModel::Client that simplifies the
 common CRUD-style operations.  Including this module just requires
 passing an additional parameter when initialising JSONModel:</p>
 
-<pre><code> JSONModel::init(:client_mode =&gt; true, :url =&gt; @backend_url)
+<div class="highlighter-rouge"><pre class="highlight"><code> JSONModel::init(:client_mode =&gt; true, :url =&gt; @backend_url)
  include JSONModel
 </code></pre>
+</div>
 
 <p>If you’ll be working against a single repository, it’s convenient to
 set it as the default for subsequent actions:</p>
 
-<pre><code> JSONModel.set_repository(123)
+<div class="highlighter-rouge"><pre class="highlight"><code> JSONModel.set_repository(123)
 </code></pre>
+</div>
 
 <p>Then, several additional JSONModel methods are available:</p>
 
-<pre><code> # As before, get a paginated list of accessions (GET)
+<div class="highlighter-rouge"><pre class="highlight"><code> # As before, get a paginated list of accessions (GET)
  JSONModel(:accession).all(:page =&gt; 1)
 
  # Create a new accession (POST)
@@ -267,6 +275,7 @@ set it as the default for subsequent actions:</p>
  obj.title = "Updated title"
  obj.save
 </code></pre>
+</div>
 
 <h2 id="the-archivesspace-backend">The ArchivesSpace backend</h2>
 
@@ -280,12 +289,12 @@ JSON documents produced from instances of JSONModel classes.</p>
 
 <h3 id="mainrb----load-and-initialize-the-system">main.rb – load and initialize the system</h3>
 
-<p>The <code>main.rb</code> program is responsible for starting the ArchivesSpace
+<p>The <code class="highlighter-rouge">main.rb</code> program is responsible for starting the ArchivesSpace
 system: loading all controllers and models, creating
 users/groups/permissions as needed, and preparing the system to handle
 requests.</p>
 
-<p>When the system starts up, the <code>main.rb</code> program performs the
+<p>When the system starts up, the <code class="highlighter-rouge">main.rb</code> program performs the
 following actions:</p>
 
 <ul>
@@ -319,13 +328,13 @@ observers.</p>
   </li>
 </ul>
 
-<p>In addition to handling the system startup, <code>main.rb</code> also provides
+<p>In addition to handling the system startup, <code class="highlighter-rouge">main.rb</code> also provides
 the following facilities:</p>
 
 <ul>
   <li>
     <p>Session handling–tracks authenticated backend sessions using the
-token extracted from the <code>X-ArchivesSpace-Session</code> request header.</p>
+token extracted from the <code class="highlighter-rouge">X-ArchivesSpace-Session</code> request header.</p>
   </li>
   <li>
     <p>Helper methods for accessing the current user and current session
@@ -335,7 +344,7 @@ of each request.</p>
 
 <h3 id="restrb----request-and-response-handling-for-rest-endpoints">rest.rb – Request and response handling for REST endpoints</h3>
 
-<p>The <code>rest.rb</code> module provides the mechanism used to define the API’s
+<p>The <code class="highlighter-rouge">rest.rb</code> module provides the mechanism used to define the API’s
 REST endpoints.  Each endpoint definition includes:</p>
 
 <ul>
@@ -357,12 +366,12 @@ to be able to use the endpoint</p>
 
 <p>Each controller in the system consists of one or more of these
 endpoint definitions.  By using the endpoint syntax provided by
-<code>rest.rb</code>, the controllers can declare the interface they provide, and
+<code class="highlighter-rouge">rest.rb</code>, the controllers can declare the interface they provide, and
 are freed of having to perform the sort of boilerplate associated
 with request handling–check parameter types, coerce values from
 strings into other types, and so on.</p>
 
-<p>The <code>main.rb</code> and <code>rest.rb</code> components work together to insulate the
+<p>The <code class="highlighter-rouge">main.rb</code> and <code class="highlighter-rouge">rest.rb</code> components work together to insulate the
 controllers from much of the complexity of request handling.  By the
 time a request reaches the body of an endpoint:</p>
 
@@ -400,8 +409,8 @@ carries out the request and returns a JSON response (if successful) or
 throws an exception (if something goes wrong).</p>
 
 <p>Each controller lives in its own file, and these can be found in the
-<code>backend/app/controllers</code> directory.  Since most of the request
-handling logic is captured by the <code>rest.rb</code> module, controllers
+<code class="highlighter-rouge">backend/app/controllers</code> directory.  Since most of the request
+handling logic is captured by the <code class="highlighter-rouge">rest.rb</code> module, controllers
 generally don’t do much more than coordinate the classes from the
 model layer and send a response back to the client.</p>
 
@@ -413,7 +422,7 @@ set of CRUD operations, and from the controller’s point of view
 there’s not much difference between an update request for an accession
 and an update request for a digital object (for example).</p>
 
-<p>The <code>crud_helpers.rb</code> module pulls this commonality into a set of
+<p>The <code class="highlighter-rouge">crud_helpers.rb</code> module pulls this commonality into a set of
 helper methods that are invoked by each controller, providing methods
 for the standard operations of the system.</p>
 
@@ -454,7 +463,7 @@ validation has already happened.</p>
 <p>The remaining two aspects <em>are</em> enforced by the model layer, but
 generally don’t pertain to just a single record type.  For example, an
 accession may be linked to zero or more subjects, but so can several
-other record types, so it doesn’t make sense for the <code>Accession</code> model
+other record types, so it doesn’t make sense for the <code class="highlighter-rouge">Accession</code> model
 to contain the logic for handling subjects.</p>
 
 <p>In practice we tend to see very little functionality that belongs
@@ -465,21 +474,21 @@ the requirements of the given record type.  Features à la carte!</p>
 
 <h4 id="asmodel-and-other-mix-ins">ASModel and other mix-ins</h4>
 
-<p>At a minimum, every model includes the <code>ASModel</code> mix-in, which provides
+<p>At a minimum, every model includes the <code class="highlighter-rouge">ASModel</code> mix-in, which provides
 base versions of the following methods:</p>
 
 <ul>
   <li>
-    <p><code>Model.create_from_json</code> – Take a JSONModel instance and create a
+    <p><code class="highlighter-rouge">Model.create_from_json</code> – Take a JSONModel instance and create a
 model instance (a subclass of Sequel::Model) from it.  Returns the
 instance.</p>
   </li>
   <li>
-    <p><code>model.update_from_json</code> – Update the target model instance with
+    <p><code class="highlighter-rouge">model.update_from_json</code> – Update the target model instance with
 the values from a given JSONModel instance.</p>
   </li>
   <li>
-    <p><code>Model.sequel_to_json</code> – Return a JSONModel instance of the appropriate
+    <p><code class="highlighter-rouge">Model.sequel_to_json</code> – Return a JSONModel instance of the appropriate
 type whose values are taken from the target model instance.
 Model classes are declared to correspond to a particular JSONModel
 instance when created, so this method can automatically return a
@@ -499,18 +508,18 @@ This works by overriding the three methods as follows:</p>
 
 <ul>
   <li>
-    <p><code>Model.create_from_json</code> – Call ‘super’ to delegate the creation to
+    <p><code class="highlighter-rouge">Model.create_from_json</code> – Call ‘super’ to delegate the creation to
 the next mix-in in the chain.  When it returns the newly created
 object, extract the notes from the JSONModel instance and attach
 them to the model instance (saving them in the database).</p>
   </li>
   <li>
-    <p><code>model.update_from_json</code> – Call ‘super’ to save the other updates
+    <p><code class="highlighter-rouge">model.update_from_json</code> – Call ‘super’ to save the other updates
 to the database, then replace any existing notes entries for the
 record with the ones provided by the JSONModel.</p>
   </li>
   <li>
-    <p><code>Model.sequel_to_json</code> – Call ‘super’ to have the next mix-in in
+    <p><code class="highlighter-rouge">Model.sequel_to_json</code> – Call ‘super’ to have the next mix-in in
 the chain create a JSONModel instance, then pull the stored notes
 from the database and poke them into it.</p>
   </li>
@@ -529,8 +538,8 @@ there are a number of records that can’t exist in isolation, and only
 exist in the context of another record.  When one record can contain
 instances of another record, we call them <em>nested records</em>.</p>
 
-<p>To give an example, the <code>date</code> record type is nested within an
-<code>accession</code> record (among others).  When the model layer is asked to
+<p>To give an example, the <code class="highlighter-rouge">date</code> record type is nested within an
+<code class="highlighter-rouge">accession</code> record (among others).  When the model layer is asked to
 save a JSONModel instance containing nested records, it must pluck out
 those records, save them in the appropriate database table, and ensure
 that linkages are created within the database to allow them to be
@@ -539,14 +548,15 @@ retrieved later.</p>
 <p>This happens often enough that it would be tedious to write code for
 each model to handle its nested records, so the ASModel mix-in
 provides a declaration to handle this automatically.  For example, the
-<code>accession</code> model uses a definition like:</p>
+<code class="highlighter-rouge">accession</code> model uses a definition like:</p>
 
-<pre><code> base.def_nested_record(:the_property =&gt; :dates,
+<div class="highlighter-rouge"><pre class="highlight"><code> base.def_nested_record(:the_property =&gt; :dates,
                         :contains_records_of_type =&gt; :date,
                         :corresponding_to_association  =&gt; :date)
 </code></pre>
+</div>
 
-<p>When creating an accession, this declaration instructs the <code>Accession</code>
+<p>When creating an accession, this declaration instructs the <code class="highlighter-rouge">Accession</code>
 model to create a database record for each date listed in the “dates”
 property of the incoming record.  Each of these date records will be
 automatically linked to the created accession.</p>
@@ -557,19 +567,20 @@ automatically linked to the created accession.</p>
 is a separate, dynamically generated, model with zero or more
 properties of its own.</p>
 
-<p>For example, the <code>Event</code> model can be related to several different
+<p>For example, the <code class="highlighter-rouge">Event</code> model can be related to several different
 types of records:</p>
 
-<pre><code> define_relationship(:name =&gt; :event_link,
+<div class="highlighter-rouge"><pre class="highlight"><code> define_relationship(:name =&gt; :event_link,
                      :json_property =&gt; 'linked_records',
                      :contains_references_to_types =&gt; proc {[Accession, Resource, ArchivalObject]})
 </code></pre>
+</div>
 
 <p>This declaration generates a custom class that models the relationship
 between events and the other record types.  The corresponding JSON
-schema declaration for the <code>linked_records</code> property looks like this:</p>
+schema declaration for the <code class="highlighter-rouge">linked_records</code> property looks like this:</p>
 
-<pre><code>  "linked_records" =&gt; {
+<div class="highlighter-rouge"><pre class="highlight"><code>  "linked_records" =&gt; {
     "type" =&gt; "array",
     "ifmissing" =&gt; "error",
     "minItems" =&gt; 1,
@@ -591,19 +602,21 @@ schema declaration for the <code>linked_records</code> property looks like this:
         },
       ...
 </code></pre>
+</div>
 
 <p>That is, the property includes URI references to other records, plus
 an additional “role” property to indicate the nature of the
 relationship.  The corresponding JSON might then be:</p>
 
-<pre><code>linked_records: [{ref: '/repositories/123/accessions/456', role: 'authorizer'}, ...]
+<div class="highlighter-rouge"><pre class="highlight"><code>linked_records: [{ref: '/repositories/123/accessions/456', role: 'authorizer'}, ...]
 </code></pre>
+</div>
 
-<p>The <code>define_relationship</code> definition automatically makes use of the
+<p>The <code class="highlighter-rouge">define_relationship</code> definition automatically makes use of the
 appropriate join tables in the database to store this relationship and
 retrieve it later as needed.</p>
 
-<h4 id="agents-and-agentmanagerrb">Agents and <code>agent_manager.rb</code></h4>
+<h4 id="agents-and-agentmanagerrb">Agents and <code class="highlighter-rouge">agent_manager.rb</code></h4>
 
 <p>Agents present a bit of a representational challenge.  There are four
 types of agents (person, family, corporate entity, software), and at a
@@ -611,7 +624,7 @@ high-level they are structured in the same way: each type can contain
 one or more name records, zero or more contact records, and a number
 of properties.  Records that link to agents (via a relationship, for
 example) can link to any of the four types so, in some sense, each
-agent type implements a common <code>Agent</code> interface.</p>
+agent type implements a common <code class="highlighter-rouge">Agent</code> interface.</p>
 
 <p>However, the agent types differ in their details.  Agents contain name
 records, but the types of those name records correspond to the type of
@@ -619,18 +632,20 @@ the agent: a person agent contains a person name record, for example.
 So, in spite of their similarities, the different agents need to be
 modelled as separate record types.</p>
 
-<p>The <code>agent_manager</code> module captures the high-level similarities
+<p>The <code class="highlighter-rouge">agent_manager</code> module captures the high-level similarities
 between agents.  Each agent model includes the agent manager mix-in:</p>
 
-<pre><code> include AgentManager::Mixin
+<div class="highlighter-rouge"><pre class="highlight"><code> include AgentManager::Mixin
 </code></pre>
+</div>
 
 <p>and then defines itself declaratively by the provided class method:</p>
 
-<pre><code> register_agent_type(:jsonmodel =&gt; :agent_person,
+<div class="highlighter-rouge"><pre class="highlight"><code> register_agent_type(:jsonmodel =&gt; :agent_person,
                      :name_type =&gt; :name_person,
                      :name_model =&gt; NamePerson)
 </code></pre>
+</div>
 
 <p>This definition sets up the properties of that agent.  It creates:</p>
 
@@ -686,7 +701,7 @@ ArchivesSpace can appear in one or both of the following layers:</p>
   <li>
     <p>At the JSONModel level, validations are captured by JSON schema
 documents.  Where more flexibility is needed, custom validations
-are added to the <code>common/validations.rb</code> file, allowing validation
+are added to the <code class="highlighter-rouge">common/validations.rb</code> file, allowing validation
 logic to be expressed using arbitrary Ruby code.</p>
   </li>
   <li>
@@ -707,7 +722,7 @@ and the database schema.</p>
 
 <p>Updating a record using the ArchivesSpace API is a two part process:</p>
 
-<pre><code> # Perform a `GET` against the desired record to fetch its JSON
+<div class="highlighter-rouge"><pre class="highlight"><code> # Perform a `GET` against the desired record to fetch its JSON
  # representation:
 
    GET /repositories/5/accessions/2
@@ -717,11 +732,12 @@ and the database schema.</p>
 
    POST /repositories/5/accessions/2
 </code></pre>
+</div>
 
 <p>If two people do this simultaneously, there’s a risk that one person
 would silently overwrite the changes made by the other.  To prevent
 this, every record is marked with a version number that it carries in
-the <code>lock_version</code> property.  When the system receives the updated
+the <code class="highlighter-rouge">lock_version</code> property.  When the system receives the updated
 copy of a record, it checks that the version it carries is still
 current; if the version number doesn’t match the one stored in the
 database, the update request is rejected and the user must re-fetch
@@ -758,7 +774,7 @@ members.</p>
   </li>
   <li>
     <p>Permissions – An action that a user can perform.  For example, A
-user with the <code>update_accession_record</code> permission is allowed to
+user with the <code class="highlighter-rouge">update_accession_record</code> permission is allowed to
 update accessions for a repository.</p>
   </li>
 </ul>
@@ -818,8 +834,8 @@ made by bulk import processes and other updates that don’t need to be
 reflected in the indexes immediately.</p>
 
 <p>The real-time indexer mode attempts to apply updates to the index much
-more quickly.  Rather than polling, it performs a <code>GET</code> request
-against the <code>/update-feed</code> endpoint of the backend.  This endpoint
+more quickly.  Rather than polling, it performs a <code class="highlighter-rouge">GET</code> request
+against the <code class="highlighter-rouge">/update-feed</code> endpoint of the backend.  This endpoint
 returns any records that were updated since the last time it was asked
 and, most importantly, it leaves the request hanging if no records
 have changed.</p>
@@ -827,7 +843,7 @@ have changed.</p>
 <p>By calling this endpoint in a loop, the real-time indexer spends most
 of its time sitting around waiting for something to happen.  The
 moment a record is updated, the already-pending request to the
-<code>/update-feed</code> endpoint yields the updated record, which is sent to
+<code class="highlighter-rouge">/update-feed</code> endpoint yields the updated record, which is sent to
 Solr and indexed immediately.  This avoids the delays associated with
 polling and keeps indexing latency low where it matters.  For example,
 newly created records should appear in the browse list by the time a

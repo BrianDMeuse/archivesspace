@@ -86,7 +86,7 @@ permissions.  Then, populate the database from your backup file using
 the MySQL client:
 
     mysql -uarchivesspace -p < mysqldump.sql
-    
+
 (change the username as required and enter your password when
 prompted).
 
@@ -125,11 +125,25 @@ For example:
 
      mkdir -p /path/to/archivesspace/data/solr_index
 
-     cp -a /unpacked/zip/solr.backup-26475-1373323208/snapshot.20130709084008464 \ 
+     cp -a /unpacked/zip/solr.backup-26475-1373323208/snapshot.20130709084008464 \
            /path/to/archivesspace/data/solr_index/index
 
-     cp -a /unpacked/zip/solr.backup-26475-1373323208/indexer_state \ 
+     cp -a /unpacked/zip/solr.backup-26475-1373323208/indexer_state \
            /path/to/archivesspace/data/
 
+
+### Checking your search indexes
+
+ArchivesSpace ships with a script that can run Lucene's CheckIndex
+tool for you, verifying that a given Solr index is free from
+corruption.  To test an index, run the following command from your
+`archivesspace` directory:
+
+     # Or scripts/checkindex.bat for Windows
+     scripts/checkindex.sh data/solr_index/index
+
+You can use the same script to check that your Solr backups are valid:
+
+     scripts/checkindex.sh /unpacked/zip/solr.backup-26475-1373323208/snapshot.20130709084008464
 
 

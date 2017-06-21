@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -136,8 +136,9 @@
 
 <p>Edit the ArchivesSpace config.rb file:</p>
 
-<pre><code>AppConfig[:enable_solr] = false
+<div class="highlighter-rouge"><pre class="highlight"><code>AppConfig[:enable_solr] = false
 </code></pre>
+</div>
 
 <p>Note that doing this means that you will have to backup Solr manually.</p>
 
@@ -145,13 +146,15 @@
 
 <p>This config setting should point to your Solr instance:</p>
 
-<pre><code>AppConfig[:solr_url] = "http://solr.somewhere.org:8983"
+<div class="highlighter-rouge"><pre class="highlight"><code>AppConfig[:solr_url] = "http://solr.somewhere.org:8983"
 </code></pre>
+</div>
 
 <p>Include path if required:</p>
 
-<pre><code>AppConfig[:solr_url] = "http://solr.somewhere.org:8983/solr/archivesspace"
+<div class="highlighter-rouge"><pre class="highlight"><code>AppConfig[:solr_url] = "http://solr.somewhere.org:8983/solr/archivesspace"
 </code></pre>
+</div>
 
 <hr />
 

@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -122,26 +122,22 @@
           
             <h1 class="title">Running ArchivesSpace as a Windows Service</h2>
           
-          <p>Running ArchivesSpace as a Windows service requires some additional 
-configuration. </p>
+          <p>Running ArchivesSpace as a Windows service requires some additional
+configuration.</p>
 
-<p>A popular method is to use Tomcat, which ships with a script that 
-configures Tomcat as a service. For more information, please see :
-<a href="https://github.com/archivesspace/archivesspace/blob/master/README_TOMCAT.md">Instructions for running under Tomcat</a>.</p>
-
-<p>You can also use Apache [procrun]((http://commons.apache.org/proper/commons-daemon/procrun.html) to configure ArchivesSpace. We have 
-provided a service.bat script that will attempt to configure 
-procrun for you (under <code>launcher\service.bat</code>). </p>
+<p>You can also use Apache [procrun]((http://commons.apache.org/proper/commons-daemon/procrun.html) to configure ArchivesSpace. We have
+provided a service.bat script that will attempt to configure
+procrun for you (under <code class="highlighter-rouge">launcher\service.bat</code>).</p>
 
 <p>To run this script, first you need to <a href="http://www.apache.org/dist/commons/daemon/binaries/windows/">download procrun</a>.
 Extract the files and copy the prunsrv.exe and prunmgr.exe to your
-ArchivesSpace directory. </p>
+ArchivesSpace directory.</p>
 
-<p>You also need to be sure that Java in your system path and also to set <code>JAVA_HOME</code> as a global environment variable. 
+<p>You also need to be sure that Java in your system path and also to set <code class="highlighter-rouge">JAVA_HOME</code> as a global environment variable.
 To add Java to your path, edit you %PATH% environment variable to include the directory of
-your java executable ( it will be something like <code>C:\Program Files
-(x86)\Java\bin</code> ). To add <code>JAVA_HOME</code>, add a new system variable and put the
-directory where java was installed ( something like <code>C:\Program Files
+your java executable ( it will be something like <code class="highlighter-rouge">C:\Program Files
+(x86)\Java\bin</code> ). To add <code class="highlighter-rouge">JAVA_HOME</code>, add a new system variable and put the
+directory where java was installed ( something like <code class="highlighter-rouge">C:\Program Files
 (x86)\Java</code> ).</p>
 
 <p>Before setting up the ArchivesSpace service, you should also <a href="https://github.com/archivesspace/archivesspace#running-archivesspace-against-mysql">configure
@@ -150,19 +146,20 @@ Be sure that the MySQL connector jar file is in the lib directory, in order for
 the service setup script to add it to the application’s classpath.</p>
 
 <p>Lastly, for the service to shutdown cleanly, uncomment and change these lines in
-config/config.rb: </p>
+config/config.rb:</p>
 
-<pre><code>AppConfig[:use_jetty_shutdown_handler] = true 
+<div class="highlighter-rouge"><pre class="highlight"><code>AppConfig[:use_jetty_shutdown_handler] = true
 AppConfig[:jetty_shutdown_path] = "/xkcd"
 </code></pre>
+</div>
 
 <p>This enables a shutdown hook for Jetty to respond to when the shutdown action
-is taken. </p>
+is taken.</p>
 
 <p>You can now execute the batch script from your ArchivesSpace root directory from
-the command line with <code>launcher\service.bat</code>. This  will configure the service and
-provide two executables: <code>ArchivesSpaceService.exe</code> (the service) and
-<code>ArchivesSpaceServicew.exe</code> (a GUI monitor)</p>
+the command line with <code class="highlighter-rouge">launcher\service.bat</code>. This  will configure the service and
+provide two executables: <code class="highlighter-rouge">ArchivesSpaceService.exe</code> (the service) and
+<code class="highlighter-rouge">ArchivesSpaceServicew.exe</code> (a GUI monitor)</p>
 
 <p>There are several options to launch the service. The easiest is to open the GUI
 monitor and click “Launch”.</p>
@@ -170,19 +167,21 @@ monitor and click “Launch”.</p>
 <p>Alternatively, you can start the GUI monitor and minimize it in your
 system tray with:</p>
 
-<pre><code>ArchivesSpaceServicew.exe //MS//
+<div class="highlighter-rouge"><pre class="highlight"><code>ArchivesSpaceServicew.exe //MS//
 </code></pre>
+</div>
 
 <p>To execute the service from the command line, you can invoke:</p>
 
-<pre><code>ArchivesSpaceService.exe //ES// 
+<div class="highlighter-rouge"><pre class="highlight"><code>ArchivesSpaceService.exe //ES//
 </code></pre>
+</div>
 
 <p>Log output will be placed in your ArchivesSpace log directory.</p>
 
 <p>Please see the <a href="http://commons.apache.org/proper/commons-daemon/procrun.html">procrun
 documentation</a>
-for more information. </p>
+for more information.</p>
 
 
         </main>

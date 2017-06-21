@@ -76,11 +76,11 @@
         <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">Running ArchivesSpace as a Unix daemon</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">Running ArchivesSpace as a Windows Service</a></li>
-        <li><a href="/archivesspace/user/running-archivesspace-under-tomcat/">Running ArchivesSpace under Tomcat</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Setting up MySQL for Production</a></li>
         <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
         <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating your indexes</a></li>
         <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
         <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP authentication</a></li>
         <li><a href="/archivesspace/user/archivesspace-plug-ins-readme/">Plugins and Local Customizations</a></li>
         <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">Deploying under a URL prefix</a></li>
@@ -130,21 +130,23 @@ sharing of packages of customization between ArchivesSpace instances.</p>
 
 <p>** Enabling plugins</p>
 
-<p>Plug-ins are enabled by placing them in the <code>plugins</code> directory, and referencing them in the
-ArchivesSpace configuration, <code>common/config/config.rb</code>. For example:</p>
+<p>Plug-ins are enabled by placing them in the <code class="highlighter-rouge">plugins</code> directory, and referencing them in the
+ArchivesSpace configuration, <code class="highlighter-rouge">common/config/config.rb</code>. For example:</p>
 
-<pre><code>AppConfig[:plugins] = ['local', 'hello_world', 'my_plugin']
+<div class="highlighter-rouge"><pre class="highlight"><code>AppConfig[:plugins] = ['local', 'hello_world', 'my_plugin']
 </code></pre>
+</div>
 
 <p>This configuration assumes the following directories exist:</p>
 
-<pre><code>plugins
+<div class="highlighter-rouge"><pre class="highlight"><code>plugins
   hello_world
   local
   my_plugin
 </code></pre>
+</div>
 
-<p>Note that the order that the plug-ins are listed in the <code>:plugins</code> configuration option
+<p>Note that the order that the plug-ins are listed in the <code class="highlighter-rouge">:plugins</code> configuration option
 determines the order in which they are loaded by the application.</p>
 
 <p>** Plugin structure</p>
@@ -153,7 +155,7 @@ determines the order in which they are loaded by the application.</p>
 The following shows the supported plug-in structure. Files contained in these directories can
 be used to override or extend the behavior of the core application.</p>
 
-<pre><code>backend
+<div class="highlighter-rouge"><pre class="highlight"><code>backend
   controllers ......... backend endpoints
   model ............... database mapping models
   plugin_init.rb ...... if present, loaded when the backend first starts
@@ -173,6 +175,7 @@ migrations ............ database migrations
 schemas ............... JSONModel schema definitions
 search_definitions.rb . Advanced search fields
 </code></pre>
+</div>
 
 <p>** Overriding locales</p>
 
@@ -180,8 +183,9 @@ search_definitions.rb . Advanced search fields
 some part of a locale file for the staff interface, you can just add the following structure
 to the local plug-in:</p>
 
-<pre><code>plugins/local/frontend/locales/en.yml
+<div class="highlighter-rouge"><pre class="highlight"><code>plugins/local/frontend/locales/en.yml
 </code></pre>
+</div>
 
 <p>This is a general rule. That is, to override behavior, rather then extend it, match the path
 to the file that contains the behavior to be overridden.</p>
@@ -191,34 +195,38 @@ to the file that contains the behavior to be overridden.</p>
 <p>Another example, to override the branding of the staff interface, add
 your own template at:</p>
 
-<pre><code>plugins/local/frontend/views/site/_branding.html.erb
+<div class="highlighter-rouge"><pre class="highlight"><code>plugins/local/frontend/views/site/_branding.html.erb
 </code></pre>
+</div>
 
 <p>Files such as images, stylesheets and PDFs can be made available as static resources by
-placing them in an <code>assets</code> directory under an enabled plug-in. For example, the following file:</p>
+placing them in an <code class="highlighter-rouge">assets</code> directory under an enabled plug-in. For example, the following file:</p>
 
-<pre><code>plugins/local/frontend/assets/my_logo.png
+<div class="highlighter-rouge"><pre class="highlight"><code>plugins/local/frontend/assets/my_logo.png
 </code></pre>
+</div>
 
 <p>Will be available via the following URL:</p>
 
-<pre><code>http://your.frontend.domain.and:port/assets/my_logo.png
+<div class="highlighter-rouge"><pre class="highlight"><code>http://your.frontend.domain.and:port/assets/my_logo.png
 </code></pre>
+</div>
 
 <p>For example, to reference this logo from the custom branding file, use
 markup such as:</p>
 
-<pre><code> &lt;div class="container branding"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code> &lt;div class="container branding"&gt;
    &lt;img src="&lt;%= #{AppConfig[:frontend_prefix]} %&gt;assets/my_logo.png"/&gt;
  &lt;/div&gt;
 </code></pre>
+</div>
 
 <p>** Plugin configuration</p>
 
-<p>Plug-ins can optionally contain a configuration file at <code>plugins/[plugin-name]/config.yml</code>.
+<p>Plug-ins can optionally contain a configuration file at <code class="highlighter-rouge">plugins/[plugin-name]/config.yml</code>.
 This configuration file supports the following options:</p>
 
-<pre><code>system_menu_controller
+<div class="highlighter-rouge"><pre class="highlight"><code>system_menu_controller
   The name of a controller that will be accessible via a Plug-ins menu in the System toolbar
 repository_menu_controller
   The name of a controller that will be accessible via a Plug-ins menu in the Repository toolbar
@@ -228,78 +236,85 @@ parents
     cardinality
   ...
 </code></pre>
+</div>
 
-<p><code>system_menu_controller</code> and <code>repository_menu_controller</code> specify the names of frontend controllers
-that will be accessible via the system and repository toolbars respectively. A <code>Plug-ins</code> dropdown
+<p><code class="highlighter-rouge">system_menu_controller</code> and <code class="highlighter-rouge">repository_menu_controller</code> specify the names of frontend controllers
+that will be accessible via the system and repository toolbars respectively. A <code class="highlighter-rouge">Plug-ins</code> dropdown
 will appear in the toolbars if any enabled plug-ins have declared these configuration options. The
 controller name follows the standard naming conventions, for example:</p>
 
-<pre><code>repository_menu_controller: hello_world
+<div class="highlighter-rouge"><pre class="highlight"><code>repository_menu_controller: hello_world
 </code></pre>
+</div>
 
-<p>Points to a controller file at <code>plugins/hello_world/frontend/controllers/hello_world_controller.rb</code>
-which implements a controller class called <code>HelloWorldController</code>. When the menu item is selected
-by the user, the <code>index</code> action is called on the controller.</p>
+<p>Points to a controller file at <code class="highlighter-rouge">plugins/hello_world/frontend/controllers/hello_world_controller.rb</code>
+which implements a controller class called <code class="highlighter-rouge">HelloWorldController</code>. When the menu item is selected
+by the user, the <code class="highlighter-rouge">index</code> action is called on the controller.</p>
 
-<p>Note that the URLs for plug-in controllers are scoped under <code>plugins</code>, so the URL for the above
+<p>Note that the URLs for plug-in controllers are scoped under <code class="highlighter-rouge">plugins</code>, so the URL for the above
 example is:</p>
 
-<pre><code>http://your.frontend.domain.and:port/plugins/hello_world
+<div class="highlighter-rouge"><pre class="highlight"><code>http://your.frontend.domain.and:port/plugins/hello_world
 </code></pre>
+</div>
 
-<p>Also note that the translation for the plug-in’s name in the <code>Plug-ins</code> dropdown menu is specified
-in a locale file in the <code>frontend/locales</code> directory in the plug-in. For example, in the <code>hello_world</code>
+<p>Also note that the translation for the plug-in’s name in the <code class="highlighter-rouge">Plug-ins</code> dropdown menu is specified
+in a locale file in the <code class="highlighter-rouge">frontend/locales</code> directory in the plug-in. For example, in the <code class="highlighter-rouge">hello_world</code>
 example there is an English locale file at:</p>
 
-<pre><code>plugins/hello_world/frontend/locales/en.yml
+<div class="highlighter-rouge"><pre class="highlight"><code>plugins/hello_world/frontend/locales/en.yml
 </code></pre>
+</div>
 
-<p>The translation for the plug-in name in the <code>Plug-ins</code> dropdown menus is specified by the key <code>label</code>
+<p>The translation for the plug-in name in the <code class="highlighter-rouge">Plug-ins</code> dropdown menus is specified by the key <code class="highlighter-rouge">label</code>
 under the plug-in, like this:</p>
 
-<pre><code>en:
+<div class="highlighter-rouge"><pre class="highlight"><code>en:
   plugins:
     hello_world:
       label: Hello World
 </code></pre>
+</div>
 
 <p>Note that the example locale file contains other keys that specify translations for text displayed
 as part of the plug-in’s user interface. Be sure to place your plug-in’s translations as shown, under
-<code>plugins.[your_plugin_name]</code> in order to avoid accidentally overriding translations for other
-interface elements. In the example above, the translation for the <code>label</code> key can be referenced
+<code class="highlighter-rouge">plugins.[your_plugin_name]</code> in order to avoid accidentally overriding translations for other
+interface elements. In the example above, the translation for the <code class="highlighter-rouge">label</code> key can be referenced
 directly in an erb view file as follows:</p>
 
-<pre><code>&lt;%= I18n.t("plugins.hello_world.label") %&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;%= I18n.t("plugins.hello_world.label") %&gt;
 </code></pre>
+</div>
 
-<p>Each entry under <code>parents</code> specifies a record type that this plug-in provides a new subrecord for.
-<code>[record-type]</code> is the name of the existing record type, for example <code>accession</code>. <code>name</code> is the
-name of the plug-in in its role as a subrecord of this parent, for example <code>hello_worlds</code>.
-<code>cardinality</code> specifies the cardinality of the plug-in records. Currently supported values are
-<code>zero-to-many</code> and <code>zero-to-one</code>.</p>
+<p>Each entry under <code class="highlighter-rouge">parents</code> specifies a record type that this plug-in provides a new subrecord for.
+<code class="highlighter-rouge">[record-type]</code> is the name of the existing record type, for example <code class="highlighter-rouge">accession</code>. <code class="highlighter-rouge">name</code> is the
+name of the plug-in in its role as a subrecord of this parent, for example <code class="highlighter-rouge">hello_worlds</code>.
+<code class="highlighter-rouge">cardinality</code> specifies the cardinality of the plug-in records. Currently supported values are
+<code class="highlighter-rouge">zero-to-many</code> and <code class="highlighter-rouge">zero-to-one</code>.</p>
 
 <p>** Changing search behavior</p>
 
 <p>A plugin can add additional fields to the advanced search interface by
-including a <code>search_definitions.rb</code> file at the top-level of the
+including a <code class="highlighter-rouge">search_definitions.rb</code> file at the top-level of the
 plugin directory.  This file can contain definitions such as the
 following:</p>
 
-<pre><code>AdvancedSearch.define_field(:name =&gt; 'payment_fund_code', :type =&gt; :enum, :visibility =&gt; [:staff], :solr_field =&gt; 'payment_fund_code_u_utext')
+<div class="highlighter-rouge"><pre class="highlight"><code>AdvancedSearch.define_field(:name =&gt; 'payment_fund_code', :type =&gt; :enum, :visibility =&gt; [:staff], :solr_field =&gt; 'payment_fund_code_u_utext')
 AdvancedSearch.define_field(:name =&gt; 'payment_authorizers', :type =&gt; :text, :visibility =&gt; [:staff], :solr_field =&gt; 'payment_authorizers_u_utext')
 </code></pre>
+</div>
 
 <p>Each field defined will appear in the advanced search interface as a
-searchable field.  The <code>:visibility</code> option controls whether the field
+searchable field.  The <code class="highlighter-rouge">:visibility</code> option controls whether the field
 is presented in the staff or public interface (or both), while the
-<code>:type</code> parameter determines what sort of search is being performed.
-Valid values are <code>:text:</code>, <code>:boolean</code>, <code>:date</code> and <code>:enum</code>.  Finally,
-the <code>:solr_field</code> parameter controls which field is used from the
+<code class="highlighter-rouge">:type</code> parameter determines what sort of search is being performed.
+Valid values are <code class="highlighter-rouge">:text:</code>, <code class="highlighter-rouge">:boolean</code>, <code class="highlighter-rouge">:date</code> and <code class="highlighter-rouge">:enum</code>.  Finally,
+the <code class="highlighter-rouge">:solr_field</code> parameter controls which field is used from the
 underlying index.</p>
 
 <p>** Further information</p>
 
-<p>Please refer to the <code>hello_world</code> exemplar plug-in to find out more about how to implement
+<p>Please refer to the <code class="highlighter-rouge">hello_world</code> exemplar plug-in to find out more about how to implement
 a plug-in. Be sure to test your plug-in thoroughly as it may have unanticipated impacts on your
 ArchivesSpace application. Plug-ins are a powerful feature, designed to allow you to change
 most aspects of how the application behaves.</p>
