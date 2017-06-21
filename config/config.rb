@@ -1,6 +1,6 @@
 # Configuration defaults are shown below
 
-
+#AppConfig[:default_admin_password] = "admin"
 #AppConfig[:data_directory] = File.join(Dir.home, "ArchivesSpace")
 #AppConfig[:backup_directory] = proc { File.join(AppConfig[:data_directory], "demo_db_backups") }
 #AppConfig[:solr_index_directory] = proc { File.join(AppConfig[:data_directory], "solr_index") }
@@ -33,7 +33,7 @@ AppConfig[:backend_log_level] = "error"
 #AppConfig[:allow_other_unmapped] = false
 AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=as&password=as123&useUnicode=true&characterEncoding=UTF-8"
 #AppConfig[:db_url] = proc { AppConfig.demo_db_url }
-#AppConfig[:db_url_redacted] = proc { AppConfig[:db_url].gsub(/(user|password)=(.*?)&/, '\1=[REDACTED]&') }
+#AppConfig[:db_url_redacted] = proc { AppConfig[:db_url].gsub(/(user|password)=(.*?)(&|$)/, '\1=[REDACTED]\3') }
 AppConfig[:db_max_connections] = 10
 #AppConfig[:db_max_connections] = proc { 20 + (AppConfig[:indexer_thread_count] * 2) }
 #
@@ -161,7 +161,7 @@ AppConfig[:public_formats_resource_links] = ["ead_pdf"]
 #
 #
 ## Allow an unauthenticated user to create an account
-AppConfig[:allow_user_registration] = false
+#AppConfig[:allow_user_registration] = true
 #
 ## Help Configuration
 #AppConfig[:help_enabled] = true
@@ -214,3 +214,10 @@ AppConfig[:allow_user_registration] = false
 ## Expose external ids in the frontend
 #AppConfig[:show_external_ids] = false
 #
+##
+## This sets the allowed size of the request/response header that Jetty will accept (
+## anything bigger gets a 403 error ). Note if you want to jack this size up,
+## you will also have to configure your Nginx/Apache  as well if
+## you're using that 
+#AppConfig[:jetty_response_buffer_size_bytes] = 64 * 1024 
+#AppConfig[:jetty_request_buffer_size_bytes] = 64 * 1024 
